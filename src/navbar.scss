@@ -1,0 +1,52 @@
+/* Estilo de la barra de navegación */
+.navbar-nav {
+  display: flex;
+  justify-content: space-between; /* Alinea los elementos entre izquierda, centro y derecha */
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+/* Estilo para el logo dentro de su contenedor */
+.logo {
+  display: flex;
+  background-color: white; /* Fondo blanco */
+  border: 2px solid #ccc; /* Borde gris claro */
+  border-radius: 100px; /* Esquinas redondeadas */
+  max-height: 50px; /* Limita la altura de la imagen */
+  width: auto; /* Mantiene las proporciones */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  margin-right: auto; /* Asegura que el logo se alinee a la izquierda */
+}
+
+/* Estilo para los elementos de la lista */
+.navbar-nav .nav-item {
+  padding: 0 15px; /* Espacio horizontal entre los elementos */
+  text-align: center; /* Centra el texto dentro de cada li */
+  cursor: pointer;
+}
+
+/* Estilo para los enlaces */
+.nav-link {
+  color: white; /* Color blanco para los enlaces */
+  text-decoration: none;
+}
+
+/* Alineación del contenedor de navegación en el centro */
+.nav-center {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1; /* Esto hace que ocupe el espacio disponible */
+}
+
+/* Estilo para el enlace DONAR AHORA */
+.navbar-nav .donar {
+  margin-left: auto; /* Empuja el enlace "DONAR AHORA" hacia la derecha */
+}
+/* Perfil */
+.perfil {
+  max-height: 50px;
+  width: auto;
+  display: block;
+  margin: 0 auto; /* Centra la imagen */
+  cursor: pointer;
+}
