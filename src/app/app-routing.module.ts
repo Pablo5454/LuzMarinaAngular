@@ -46,8 +46,6 @@ const routes: Routes = [
     {path: 'voluntarios-nuestra-mision', component:VoluntariosNuestraMisionComponent}
   ]}
 
-
-
 ];
 
 @NgModule({
