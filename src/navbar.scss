@@ -1,3 +1,4 @@
+
 /* Estilo de la barra de navegación */
 .navbar-nav {
   display: flex;
@@ -45,25 +46,37 @@
 }
 
 /* Perfil */
-.perfil { max-height: 50px; width: auto; display: block; /* Mostrar siempre */ cursor: pointer; margin-right: 15px; /* Espacio a la derecha del perfil */ }
+.perfil-img {
+  max-height: 50px;
+  width: auto;
+  display: block; /* Mostrar siempre */
+  cursor: pointer;
+}
+
+.bocadillo {
+  display: flex;
+  align-items: center;
+}
+
+.donar-perfil {
+  display: flex;
+  align-items: center;
+}
 
 @media (max-width: 992px) {
-  .perfil.d-lg-none { display: block; /* Mostrar en pantallas pequeñas */ } .perfil.d-lg-block { display: none; /* Ocultar en pantallas pequeñas */ }  .nav-center {
+  .donar-perfil {
+    display: none; /* Ocultar en pantallas pequeñas */
+  }
+  .nav-center {
     flex-direction: column;
     align-items: flex-start; /* Alinea los elementos a la izquierda */
     width: 100%;
+    align-items: center; /* Centra el texto dentro de cada li */
   }
-  .perfil {
-    display: none;
 }
 
-  .nav-center .nav-item {
-    width: 100%; /* Asegura que cada elemento ocupe todo el ancho */
+@media (min-width: 992px) {
+  .perfil {
+    display: none; /* Ocultar en pantallas grandes */
   }
-
-  .nav-center .nav-link {
-    padding: 0.5rem 1rem; /* Ajusta el padding para mejor presentación en móvil */
-  }
-
-  
 }
