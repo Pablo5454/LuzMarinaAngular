@@ -1,0 +1,25 @@
+footer {
+      background-color: #000; /* negro */
+  }
+  footer .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+  
+  footer .col-md-4 {
+      flex: 1 1 100%; /* Hacer que cada columna ocupe el 100% en pantallas pequeñas */
+      padding: 10px;
+  }
+  
+  @media (min-width: 768px) {
+      footer .col-md-4 {
+          flex: 1 1 33%; /* En pantallas medianas y grandes, cada columna ocupa el 33% */
+      }
+  }
+  body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+  }
+  
