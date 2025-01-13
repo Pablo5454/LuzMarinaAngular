@@ -7,10 +7,15 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  isCollapsed = true;
+
   constructor(private modalService: NgbModal) {}
 
   open(content: any) {
     this.modalService.open(content);
   }
 
+  toggleNavbar() {
+    this.isCollapsed = !this.isCollapsed;
+  }
 }
