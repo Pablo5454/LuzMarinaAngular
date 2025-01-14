@@ -44,7 +44,19 @@
 .navbar-nav .donar {
   margin-left: auto; /* Empuja el enlace "DONAR AHORA" hacia la derecha */
 }
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0; /* Eliminar márgenes */
+}
+#esconder{
+  display: none;
+  justify-content: center;
+  transform: translateX(30px); /* Desplazar ligeramente a la derecha */
 
+
+}
 /* Perfil */
 .perfil-img {
   max-height: 50px;
@@ -64,6 +76,9 @@
 }
 
 @media (max-width: 992px) {
+  #esconder{
+    display: block;
+  }
   .donar-perfil {
     display: none; /* Ocultar en pantallas pequeñas */
   }

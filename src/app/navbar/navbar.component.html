@@ -1,6 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-body" data-bs-theme="dark">
   <div class="container-fluid">
+
     <a class="nav-link" href="#"><img src="../../assets/imagenes/logo.png" alt="Logo" class="logo"></a>
+    <div class="center-container">
+
+    <button type="button" class="btn btn-light" id="esconder">DONA AHORA</button>
+</div>
     <div class="bocadillo d-flex align-items-center">
       <div class="perfil">
         <img src="../../assets/imagenes/perfil.svg" alt="Perfil" class="perfil-img">
@@ -11,7 +16,9 @@
         </button>
       </div>
     </div>
+
     <div [ngClass]="{'collapse': isCollapsed, 'navbar-collapse': true}" id="navbarNav">
+
       <ul class="navbar-nav">
         <div class="nav-center">
           <li class="nav-item">
