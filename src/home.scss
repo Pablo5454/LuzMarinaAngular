@@ -24,6 +24,107 @@
   padding: 1.5rem;
   line-height: 1.6;
 }
+.escribir{
+  color:white;
+
+}
+.escritura{
+  margin-top: 1%;
+margin-left: 30%;
+}
+.donar-socio{
+display: flex;
+gap:20px;
+
+
+}
+.boton-socio{
+  margin-top: 1%;
+  margin-left: 10%;
+
+}
+.boton-dona{
+  margin-top: 1%;
+
+
+}
+.minimalista-boton {
+  background-color: rgba(33 ,37 ,41, 1) !important;
+  border: 2px solid rgba(33 ,37 ,41, 1);
+  color: #ffffff; /* Texto azul */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  font-size: 16px; /* Tamaño de la fuente */
+  border-radius: 5px; /* Bordes redondeados */
+  text-align: center; /* Alinear el texto al centro */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Mostrar el botón en línea */
+  transition: background-color 1s, color 1s; /* Transición suave para cambios de color */
+}
+
+.minimalista-boton:hover {
+  background-color: rgb(0, 0, 0) !important;
+  color: #ffffff; /* Texto blanco al pasar el ratón */
+  border: 2px solid rgb(0, 0, 0);
+
+}
+.div-titulo2{
+  display: flex;
+  justify-content: center;
+
+}
+.titulo2 {
+  font-size: 36px; /* Tamaño de fuente grande */
+  font-weight: bold; /* Texto en negrita */
+  text-align: center; /* Alinear el texto al centro */
+  color: #333333; /* Color del texto */
+  margin-top: 20px; /* Espacio superior */
+}
+
+
+
+.content {
+  display: flex; /* Utilizar flexbox para alinear elementos */
+  align-items: center; /* Alinear elementos verticalmente */
+  justify-content: space-between; /* Espacio entre los elementos */
+  margin: 20px; /* Margen alrededor del contenedor */
+}
+
+.texto {
+  font-size: 18px; /* Tamaño de fuente del texto */
+  line-height: 1.6; /* Altura de línea para mejor legibilidad */
+  color: #000000; /* Color del texto */
+  text-align: justify; /* Justificar el texto */
+  width: 60%; /* Ancho del texto */
+}
+.titulo3 {
+  font-size: 30px; /* Tamaño de fuente del título */
+  font-weight: bold; /* Texto en negrita */
+  text-align: center; /* Alinear el texto al centro */
+  color: #333333; /* Color del texto */
+  margin-top: 20px; /* Espacio superior */
+}
+
+.texto {
+  font-size: 18px; /* Tamaño de fuente del texto */
+  line-height: 1.6; /* Altura de línea para mejor legibilidad */
+  color: #555555; /* Color del texto */
+  text-align: justify; /* Justificar el texto */
+  margin: 20px; /* Espaciado interno */
+}
+
+
+
+
+.imagen {
+  text-align: center; /* Alinear la imagen al centro */
+  width: 35%; /* Ancho de la imagen */
+}
+
+.imagen img {
+  max-width: 100%; /* Ajustar imagen al contenedor */
+  height: auto; /* Mantener proporciones */
+}
+
 
 .titulo {
   margin-top: 0;
@@ -54,6 +155,10 @@
   p {
     font-size: 0.9rem; /* Ajusta el tamaño del párrafo */
   }
+}
+
+.donar-socio{
+  background-color: rgba(33 ,37 ,41, 1) !important;
 }
 
 @media (max-width: 768px) { /* Para móviles verticales */
