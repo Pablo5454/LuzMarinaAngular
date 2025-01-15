@@ -21,7 +21,7 @@ import { VoluntariosComoAyudarComponent } from './voluntarios-como-ayudar/volunt
 import { VoluntariosNuestraMisionComponent } from './voluntarios-nuestra-mision/voluntarios-nuestra-mision.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'contacto', component:ContactoComponent, children:[
     {path: 'contacto-card-formulario-contacto', component:ContactoCardFormularioContactoComponent},
     {path: 'contacto-card-info', component:ContactoCardInfoComponent}
@@ -46,8 +46,6 @@ const routes: Routes = [
     {path: 'voluntarios-como-ayudar', component:VoluntariosComoAyudarComponent},
     {path: 'voluntarios-nuestra-mision', component:VoluntariosNuestraMisionComponent}
   ]}
-
-
 
 ];
 
