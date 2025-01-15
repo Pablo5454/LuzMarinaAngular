@@ -1,41 +1,265 @@
 /* Contenedor de imagen y texto */
 .image-container {
   position: relative;
-  width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+  width: 100%;
+  /* Asegura que la imagen ocupe todo el ancho */
 }
 
 .image-container img {
   width: 100%;
-  height: auto; /* Mantiene la proporción de la imagen */
+  height: auto;
+  /* Mantiene la proporción de la imagen */
 }
 
 /* General para el contenedor de texto centrado */
 .centered-text {
   position: absolute;
-  top: 50%; /* Centra verticalmente */
+  top: 50%;
+  /* Centra verticalmente */
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 2rem; /* Ajusta el tamaño del texto */
+  font-size: 2rem;
+  /* Ajusta el tamaño del texto */
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   text-align: center;
-  width: 60%; /* Ancho por defecto para pantallas grandes */
+  width: 60%;
+  /* Ancho por defecto para pantallas grandes */
   padding: 1.5rem;
   line-height: 1.6;
 }
+
+.container-escritura {
+  color: white;
+  margin-left: 35%;
+
+}
+
+.donar-socio {
+  display: flex;
+  gap: 20px;
+  height: 7%;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.boton-socio {
+
+  margin-left: 10%;
+
+}
+
+
+.minimalista-boton {
+  background-color: rgba(33, 37, 41, 1) !important;
+  border: none;
+  color: #ffffff;
+  /* Texto azul */
+  padding: 10px 10px;
+  /* Espaciado interno del botón */
+  font-size: 16px;
+  /* Tamaño de la fuente */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  text-align: center;
+  /* Alinear el texto al centro */
+  text-decoration: none;
+  /* Sin subrayado */
+  display: inline-block;
+  /* Mostrar el botón en línea */
+  transition: background-color 1s, color 1s;
+  /* Transición suave para cambios de color */
+}
+
+.minimalista-boton:hover {
+  background-color: rgb(255, 255, 255) !important;
+  color: #000000;
+  /* Texto blanco al pasar el ratón */
+  border: none;
+
+}
+
+.div-titulo2 {
+  display: flex;
+  justify-content: center;
+
+}
+
+.titulo2 {
+  font-size: 36px;
+  /* Tamaño de fuente grande */
+  font-weight: bold;
+  /* Texto en negrita */
+  text-align: center;
+  /* Alinear el texto al centro */
+  color: #333333;
+  /* Color del texto */
+  margin-top: 20px;
+  /* Espacio superior */
+}
+
+
+
+.content {
+  display: flex;
+  /* Utilizar flexbox para alinear elementos */
+  align-items: center;
+  /* Alinear elementos verticalmente */
+  justify-content: space-between;
+  /* Espacio entre los elementos */
+  margin: 20px;
+  margin-left:100px; /* Margen izquierdo */
+
+  /* Margen alrededor del contenedor */
+}
+.container-texto-imagen {
+  display: flex;
+  /* Utilizar flexbox para alinear elementos */
+  align-items: center;
+  /* Alinear elementos verticalmente */
+  justify-content: space-between;
+  /* Espacio entre los elementos */
+  margin: 20px;
+  /* Margen alrededor del contenedor */
+}
+
+
+.contenido {
+  display: flex;
+  /* Utilizar flexbox para alinear elementos */
+  align-items: center;
+  /* Alinear elementos verticalmente */
+  justify-content: space-between;
+  /* Espacio entre los elementos */
+  margin: 20px;
+  margin-left:100px; /* Margen izquierdo */
+}
+
+
+.titulo4 {
+  text-align: center;
+  /* Justificar el texto */
+
+
+
+}
+
+
+.texto {
+  font-size: 18px;
+  /* Tamaño de fuente del texto */
+  line-height: 1.6;
+  /* Altura de línea para mejor legibilidad */
+  color: #000000;
+  /* Color del texto */
+  text-align: justify;
+  /* Justificar el texto */
+  width: 40%;
+  /* Ancho del texto */
+}
+.texto2 {
+  font-size: 18px; /* Tamaño de fuente del texto */
+  line-height: 1.6; /* Altura de línea para mejor legibilidad */
+  color: #000000; /* Color del texto */
+  text-align: justify;
+  width: 40%; /* Ancho del texto */
+  align-items: center; /* Alinear elementos verticalmente al centro */
+  margin-right: 400px; /* Añade margen izquierdo para separar del contenedor de la imagen */
+
+}
+
+
+.titulo3 {
+  font-size: 30px;
+  /* Tamaño de fuente del título */
+  font-weight: bold;
+  /* Texto en negrita */
+  text-align: center;
+  /* Alinear el texto al centro */
+  color: #000000;
+  /* Color del texto */
+  margin-top: 20px;
+  /* Espacio superior */
+}
+
+.titulo4 {
+  color: #000000;
+  /* Color del texto */
+
+}
+
+
+
+
+
+
+
+.imagen img {
+  max-width: 100%;
+  /* Ajustar imagen al contenedor */
+  height: auto;
+  /* Mantener proporciones */
+}
+
 
 .titulo {
   margin-top: 0;
   margin-bottom: 10px;
 }
 
+.imagen-container {
+  display: flex;
+  /* Utilizar flexbox para alinear elementos */
+  justify-content: center;
+  /* Alinear elementos horizontalmente */
+  align-items: center;
+  /* Alinear elementos verticalmente */
+  margin-left: 20px; /* Margen izquierdo */
+  margin-right: 20px; /* Margen derecho */
+}
+
+.imagen-container1 {
+  display: flex;
+  justify-content: flex-start; /* Alinear elementos horizontalmente a la izquierda */
+  align-items: center; /* Alinear elementos verticalmente al centro */
+  margin-left: 20px; /* Margen izquierdo */
+  margin-right: 20px; /* Margen derecho */
+}
+
+
+.foto-barco {
+  width: 50%;
+  /* Ajusta el ancho según tus necesidades */
+  height: 70%;
+  /* Mantiene la proporción original */
+
+  border-radius: 15px;
+  /* Ajusta el valor para redondear más o menos las esquinas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+
+}
+.foto-barco2 {
+  width: 50%; /* Ajusta el ancho según tus necesidades */
+  height: 70%; /* Mantiene la proporción original */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Añade una sombra para un mejor efecto visual */
+}
+
+
 /* Ajustes responsivos */
-@media (max-width: 1100px) { /* Para tablets */
+@media (max-width: 1100px) {
+
+  /* Para tablets */
   .centered-text {
-    top: 65%; /* Baja el texto */
-    font-size: 1.5rem; /* Reduce ligeramente el tamaño del texto */
-    width: 80%; /* Reduce el ancho */
+    top: 65%;
+    /* Baja el texto */
+    font-size: 1.5rem;
+    /* Reduce ligeramente el tamaño del texto */
+    width: 80%;
+    /* Reduce el ancho */
   }
 
   .titulo {
@@ -44,25 +268,39 @@
   }
 
   h1 {
-    font-size: 1.8rem; /* Ajusta el tamaño del título */
+    font-size: 1.8rem;
+    /* Ajusta el tamaño del título */
   }
 
   h2 {
-    font-size: 1.4rem; /* Ajusta el tamaño del subtítulo */
+    font-size: 1.4rem;
+    /* Ajusta el tamaño del subtítulo */
   }
 
   p {
-    font-size: 0.9rem; /* Ajusta el tamaño del párrafo */
+    font-size: 0.9rem;
+    /* Ajusta el tamaño del párrafo */
   }
 }
 
-@media (max-width: 768px) { /* Para móviles verticales */
+.donar-socio {
+  background-color: rgba(33, 37, 41, 1) !important;
+}
+
+@media (max-width: 768px) {
+
+  /* Para móviles verticales */
   .centered-text {
-    top: auto; /* Baja el texto más */
-    font-size: 1.2rem; /* Reduce el tamaño general del texto */
-    width: auto; /* Ocupa un poco menos de ancho */
-    padding: 1rem; /* Espaciado interno */
-    line-height: 1.4; /* Mejora la legibilidad */
+    top: auto;
+    /* Baja el texto más */
+    font-size: 1.2rem;
+    /* Reduce el tamaño general del texto */
+    width: auto;
+    /* Ocupa un poco menos de ancho */
+    padding: 1rem;
+    /* Espaciado interno */
+    line-height: 1.4;
+    /* Mejora la legibilidad */
   }
 
   .titulo {
@@ -71,23 +309,31 @@
   }
 
   h1 {
-    font-size: 1.5rem; /* Reduce el tamaño del título */
+    font-size: 1.5rem;
+    /* Reduce el tamaño del título */
   }
 
   h2 {
-    font-size: 1.2rem; /* Reduce el tamaño del subtítulo */
+    font-size: 1.2rem;
+    /* Reduce el tamaño del subtítulo */
   }
 
   p {
-    font-size: 0.8rem; /* Ajusta el tamaño del párrafo */
+    font-size: 0.8rem;
+    /* Ajusta el tamaño del párrafo */
   }
 }
 
-@media (max-width: 600px) and (orientation: landscape) { /* Para móviles horizontales */
+@media (max-width: 600px) and (orientation: landscape) {
+
+  /* Para móviles horizontales */
   .centered-text {
-    top: 20%; /* Ajusta para pantallas más anchas y menos altas */
-    font-size: 1rem; /* Ajusta el tamaño del texto */
-    width: 70%; /* Reduce el ancho */
+    top: 20%;
+    /* Ajusta para pantallas más anchas y menos altas */
+    font-size: 1rem;
+    /* Ajusta el tamaño del texto */
+    width: 70%;
+    /* Reduce el ancho */
     padding: 0.5rem;
   }
 
@@ -96,16 +342,24 @@
     margin-bottom: 20px;
   }
 
-  h1, h2, p {
-    font-size: 0.9rem; /* Ajusta los tamaños proporcionalmente */
+  h1,
+  h2,
+  p {
+    font-size: 0.9rem;
+    /* Ajusta los tamaños proporcionalmente */
   }
 }
 
-@media (max-width: 550px) { /* Dispositivos muy pequeños */
+@media (max-width: 550px) {
+
+  /* Dispositivos muy pequeños */
   .centered-text {
-    top: 90%; /* Baja el texto más */
-    font-size: 1rem; /* Ajusta el tamaño del texto */
-    width: 90%; /* Ocupa casi todo el ancho */
+    top: 90%;
+    /* Baja el texto más */
+    font-size: 1rem;
+    /* Ajusta el tamaño del texto */
+    width: 90%;
+    /* Ocupa casi todo el ancho */
   }
 
   .titulo {
@@ -113,12 +367,14 @@
     margin-bottom: 20px;
   }
 
-  h1, h2 {
-    font-size: 1rem; /* Ajusta los títulos */
+  h1,
+  h2 {
+    font-size: 1rem;
+    /* Ajusta los títulos */
   }
 
   p {
-    font-size: 0.8rem; /* Ajusta el párrafo */
+    font-size: 0.8rem;
+    /* Ajusta el párrafo */
   }
 }
-
