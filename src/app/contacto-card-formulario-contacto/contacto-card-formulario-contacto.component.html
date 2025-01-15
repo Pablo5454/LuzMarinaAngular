@@ -1,16 +1,32 @@
-<form action="/my-handling-form-page" method="post">
-  <ul>
-    <li>
-      <label for="name">Nombre: </label>
-      <input type="text" id="name" name="user_name" />
-    </li>
-    <li>
-      <label for="mail">Correo electrónico: </label>
-      <input type="email" id="mail" name="user_mail" />
-    </li>
-    <li>
-      <label for="msg">Mensaje: </label>
-      <textarea id="msg" name="user_message"></textarea>
-    </li>
-  </ul>
-</form>
+
+<div class="container">
+	<!-- code here -->
+	<div class="card">
+		<div class="card-image">
+			<h2 class="card-heading">
+				Contáctanos
+				<small>Si deseas colaborar, rellena el siguiente formulario:</small>
+			</h2>
+		</div>
+		<form class="card-form">
+			<div class="input">
+				<input type="text" class="input-field"  required/>
+				<label class="input-label">Nombre completo</label>
+			</div>
+						<div class="input">
+				<input type="text" class="input-field"  required/>
+				<label class="input-label">Email</label>
+			</div>
+						<div class="input">
+				<input type="password" class="input-field" required/>
+				<label class="input-label">Password</label>
+			</div>
+			<div class="action">
+				<button class="action-button">Get started</button>
+			</div>
+		</form>
+		<div class="card-info">
+			<p>By signing up you are agreeing to our <a href="#">Terms and Conditions</a></p>
+		</div>
+	</div>
+</div>
