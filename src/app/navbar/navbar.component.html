@@ -1,37 +1,49 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-body" data-bs-theme="dark">
   <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigati*-----------------------------------------on">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav w-100 d-flex justify-content-between align-items-center">
-              <!-- Logo a la izquierda -->
 
-                  <a class="nav-link" href="#"><img src="../../assets/imagenes/logo.png" alt="Logo" class="logo"></a>
+    <a class="nav-link" href="#"><img src="../../assets/imagenes/logo.png" alt="Logo" class="logo"></a>
+    <div class="center-container">
 
-              <!-- Elementos de navegación centrados -->
-              <div class="nav-center">
-                  <li class="nav-item">
-                      <a class="nav-link" href="#Inicio">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#Proyectos">Proyectos</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#Voluntarios">Voluntarios</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#Noticias">Noticias</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" routerLink="/contacto">Contacto</a>
-                  </li>
-              </div>
-              <!-- Enlace DONAR AHORA a la derecha -->
-              <li class="nav-item donar">
-                  <button type="button" class="btn btn-light">DONA AHORA</button>                    </li>
-                <img src="../../assets/imagenes/perfil.svg" alt="Logo" class="perfil">
-          </ul>
+    <button type="button" class="btn btn-light" id="esconder">DONA AHORA</button>
+</div>
+    <div class="bocadillo d-flex align-items-center">
+      <div class="perfil">
+        <img src="../../assets/imagenes/perfil.svg" alt="Perfil" class="perfil-img">
       </div>
+      <div class="boton">
+        <button class="navbar-toggler ms-2" type="button" (click)="isCollapsed = !isCollapsed" aria-controls="navbarNav" [attr.aria-expanded]="!isCollapsed" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <div [ngClass]="{'collapse': isCollapsed, 'navbar-collapse': true}" id="navbarNav">
+
+      <ul class="navbar-nav">
+        <div class="nav-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#Inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Proyectos">Proyectos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Voluntarios">Voluntarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Noticias">Noticias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#CONTACTO">Contacto</a>
+          </li>
+        </div>
+        <div class="donar-perfil d-none d-lg-flex">
+          <li class="nav-item donar">
+            <button type="button" class="btn btn-light">DONA AHORA</button>
+          </li>
+          <img src="../../assets/imagenes/perfil.svg" alt="Perfil" class="perfil-img">
+        </div>
+      </ul>
+    </div>
   </div>
 </nav>

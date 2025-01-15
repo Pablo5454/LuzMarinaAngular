@@ -1,16 +1,18 @@
+
 /* Estilo de la barra de navegación */
 .navbar-nav {
   display: flex;
   justify-content: space-between; /* Alinea los elementos entre izquierda, centro y derecha */
+  align-items: center;
   width: 100%;
   padding: 0;
   margin: 0;
 }
+
 /* Estilo para el logo dentro de su contenedor */
 .logo {
   display: flex;
   background-color: white; /* Fondo blanco */
-  border: 2px solid #ccc; /* Borde gris claro */
   border-radius: 100px; /* Esquinas redondeadas */
   max-height: 50px; /* Limita la altura de la imagen */
   width: auto; /* Mantiene las proporciones */
@@ -42,11 +44,54 @@
 .navbar-nav .donar {
   margin-left: auto; /* Empuja el enlace "DONAR AHORA" hacia la derecha */
 }
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0; /* Eliminar márgenes */
+}
+#esconder{
+  display: none;
+  justify-content: center;
+  transform: translateX(30px); /* Desplazar ligeramente a la derecha */
+
+
+}
 /* Perfil */
-.perfil {
+.perfil-img {
   max-height: 50px;
   width: auto;
-  display: block;
-  margin: 0 auto; /* Centra la imagen */
+  display: block; /* Mostrar siempre */
   cursor: pointer;
+}
+
+.bocadillo {
+  display: flex;
+  align-items: center;
+}
+
+.donar-perfil {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  #esconder{
+    display: block;
+  }
+  .donar-perfil {
+    display: none; /* Ocultar en pantallas pequeñas */
+  }
+  .nav-center {
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    width: 100%;
+    align-items: center; /* Centra el texto dentro de cada li */
+  }
+}
+
+@media (min-width: 992px) {
+  .perfil {
+    display: none; /* Ocultar en pantallas grandes */
+  }
 }
