@@ -1,0 +1,27 @@
+/* Habilitar barras de desplazamiento superpuestas */
+
+    
+    /* Personalización del scrollbar */
+    ::-webkit-scrollbar {
+      width: 12px; /* Ancho del scrollbar */
+      height: 12px; /* Altura del scrollbar horizontal */
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: transparent; /* Fondo del track transparente */
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: rgba(128, 128, 128, 0.6); /* Gris translúcido */
+      border-radius: 10px; /* Bordes redondeados */
+      border: 3px solid rgba(0, 0, 0, 0); /* Fondo transparente para evitar solapamiento */
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(128, 128, 128, 0.8); /* Gris más oscuro al pasar el mouse */
+    }
+    
+    ::-webkit-scrollbar-horizontal {
+      height: 8px; /* Ajuste específico para barras horizontales */
+    }
+    

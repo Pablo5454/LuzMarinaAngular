@@ -1,34 +1,33 @@
 /* Contenedor de imagen y texto */
-.image-container {
+.image-container-home {
   position: relative;
   width: 100%;
-  /* Asegura que la imagen ocupe todo el ancho */
-}
-
-.image-container img {
-  width: 100%;
-  height: auto;
-  /* Mantiene la proporción de la imagen */
+  height: 94vh; /* Ajusta la altura para ocupar toda la pantalla */
+  background-image: url('assets/imagenes/imagen de fondo.png');
+  background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+  background-position: center; /* Centra la imagen */
 }
 
 /* General para el contenedor de texto centrado */
 .centered-text {
-  position: absolute;
+  position: absolute; /* Asegura que el texto esté sobre la imagen */
   top: 50%;
   /* Centra verticalmente */
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 2rem;
-  /* Ajusta el tamaño del texto */
+  font-size: 1.5rem; /* Ajusta el tamaño del texto */
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   text-align: center;
   width: 60%;
   /* Ancho por defecto para pantallas grandes */
-  padding: 1.5rem;
+  padding: 1rem;
   line-height: 1.6;
 }
+
+
+
 
 .container-escritura {
   color: white;
@@ -54,7 +53,7 @@
 
 
 .minimalista-boton {
-  background-color: rgba(33, 37, 41, 1) !important;
+  background-color:#000000 !important;
   border: none;
   color: #ffffff;
   /* Texto azul */
@@ -72,6 +71,7 @@
   /* Mostrar el botón en línea */
   transition: background-color 1s, color 1s;
   /* Transición suave para cambios de color */
+  margin: 10px;
 }
 
 .minimalista-boton:hover {
@@ -165,7 +165,7 @@
   line-height: 1.6; /* Altura de línea para mejor legibilidad */
   color: #000000; /* Color del texto */
   text-align: justify;
-  width: 40%; /* Ancho del texto */
+  width: 50%; /* Ancho del texto */
   align-items: center; /* Alinear elementos verticalmente al centro */
   margin-right: 400px; /* Añade margen izquierdo para separar del contenedor de la imagen */
 
@@ -188,6 +188,15 @@
 .titulo4 {
   color: #000000;
   /* Color del texto */
+
+}
+
+.titulo5 {
+  color: #000000;
+  /* Color del texto */
+  font-size: 30px;
+  /* Tamaño de fuente del título */
+  
 
 }
 
@@ -415,39 +424,46 @@
 }*/
 
 
-img{
-  width: 150px;
+.imagen-carrusel {
+  width: 350px;
   margin: 0 20px;
   transition: .5s;
   cursor: pointer;
 }
 
-
-.scroll{
+.scroll {
   position: relative;
   display: flex;
-  width: 1200px;
+  justify-content: center; /* Centramos el contenedor */
+  margin: 0 auto; /* Centramos el contenedor horizontalmente */
+  width: 50%; /* Ajustamos el ancho al 100% para ocupar todo el espacio disponible */
   overflow: hidden;
   mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
 }
 
-.scroll div{
+.scroll div {
   white-space: nowrap;
-  animation: animate 30s linear infinite;
+  animation: animate 40s linear infinite;
 }
-
 
 @keyframes animate {
-  0%{
-      transform: translateX(0);
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
   }
-
-  100%{
-      transform: translateX(-100%);
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
   }
 }
 
-.scroll:hover div{
+.scroll:hover div {
   animation-play-state: paused;
 }
 
