@@ -46,6 +46,7 @@ const routes: Routes = [
     {path: 'voluntarios-como-ayudar', component:VoluntariosComoAyudarComponent},
     {path: 'voluntarios-nuestra-mision', component:VoluntariosNuestraMisionComponent}
   ]}
+  
 
 ];
 
