@@ -4,14 +4,15 @@
     <a class="nav-link" href="#"><img src="../../assets/imagenes/logo.png" alt="Logo" class="logo"></a>
     <div class="center-container">
 
-    <button type="button" class="btn btn-light" id="esconder">DONA AHORA</button>
-</div>
+    </div>
+    
     <div class="bocadillo d-flex align-items-center">
-      <div class="perfil">
-        <img src="../../assets/imagenes/perfil.svg" alt="Perfil" class="perfil-img">
-      </div>
+      <div class="perfil-">
+      <img src="../../assets/imagenes/perfil.svg" alt="Perfil"  (click)="toggleMenu()">
+    </div>
       <div class="boton">
-        <button class="navbar-toggler ms-2" type="button" (click)="isCollapsed = !isCollapsed" aria-controls="navbarNav" [attr.aria-expanded]="!isCollapsed" aria-label="Toggle navigation">
+        <button class="navbar-toggler ms-2" type="button" (click)="isCollapsed = !isCollapsed" aria-controls="navbarNav"
+          [attr.aria-expanded]="!isCollapsed" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
@@ -39,11 +40,51 @@
         </div>
         <div class="donar-perfil d-none d-lg-flex">
           <li class="nav-item donar">
-            <button type="button" class="btn btn-light">DONA AHORA</button>
           </li>
-          <img src="../../assets/imagenes/perfil.svg" alt="Perfil" class="perfil-img">
         </div>
+
+
       </ul>
+      <img src="../../assets/imagenes/perfil.svg" alt="Perfil" class="perfil-img" (click)="toggleMenu()">
+
+     <!-- Sub menu-->
+
+      
+    </div>
+    <div class="sub-menu-wrap" id="subMenu">
+      <div class="sub-menu">
+        <div class="user-info">
+          <h2>Usuario invitado</h2>
+          
+        </div>
+        <hr>
+      
+        <a href="#" class="sub-menu-link">
+          <img src="../../assets/imagenes/perfil.svg" alt="">
+          <a class="nav-link" href="#login" [routerLink]="['/login']">login</a>
+   
+          <span>></span>
+        </a>
+        <a href="#" class="sub-menu-link">
+          <img src="../../assets/imagenes/perfil.svg" alt="">
+          <a class="nav-link" href="#login" [routerLink]="['/register']">Register</a>
+   
+          <span>></span>
+        </a>
+        <a href="#" class="sub-menu-link">
+          <img src="../../assets/imagenes/perfil.svg" alt="">
+          <p>Edit Profile</p>
+          <span>></span>
+        </a>
+        <a href="#" class="sub-menu-link">
+          <img src="../../assets/imagenes/perfil.svg" alt="">
+          <p>Logout</p>
+          <span>></span>
+        </a>
+      </div>
     </div>
   </div>
+  
 </nav>
+
+  

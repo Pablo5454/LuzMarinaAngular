@@ -23,6 +23,9 @@ import { NoticiasTituloComponent } from './noticias-titulo/noticias-titulo.compo
 import { ContactoCardInfoComponent } from './contacto-card-info/contacto-card-info.component';
 import { ContactoCardFormularioContactoComponent } from './contacto-card-formulario-contacto/contacto-card-formulario-contacto.component';
 import { DonacionFormularioDonacionComponent } from './donacion-formulario-donacion/donacion-formulario-donacion.component';
+import { LoginComponent } from './login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -45,12 +48,15 @@ import { DonacionFormularioDonacionComponent } from './donacion-formulario-donac
     NoticiasTituloComponent,
     ContactoCardInfoComponent,
     ContactoCardFormularioContactoComponent,
-    DonacionFormularioDonacionComponent
+    DonacionFormularioDonacionComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
