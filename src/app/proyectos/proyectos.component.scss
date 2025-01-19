@@ -1,106 +1,100 @@
 @property --ang {
-  syntax: '<angle>';
-  initial-value: 0deg;
-  inherits: true;
+	syntax: '<angle>';
+	initial-value: 0deg;
+	inherits: true
 }
 
 .card {
-  --ani-grad: conic-gradient(from var(--ang),
-      rgb(from #ffd23f r g b / var(--alpha, .5)),
-      #0000 40%) border-box;
-  border: solid 6px #0000;
-  background:
-    linear-gradient(#312244 0 0) padding-box,
-    var(--ani-grad);
-  animation: ang 3s linear infinite;
+	--ani-grad:
+		conic-gradient(from var(--ang),
+				rgb(from #fffa9d r g b / var(--alpha, .5)),
+				#0000 40%) border-box;
+	border: solid 6px #0000;
+	background:
+		linear-gradient(#312244 0 0) padding-box,
+		var(--ani-grad);
+	animation: ang 3s linear infinite;
+
+  min-width: 775px;
+
+  min-height: 475px;
+  margin: 1em 0; /* Espaciado vertical entre las tarjetas */
+  padding: .75em;
+  box-sizing: border-box;
+  place-content: center;
+  color: white;
 }
 
-@keyframes ang {
-  0% {
-    --ang: 1turn;
-  }
-}
+@keyframes ang { 0% { --ang: 1turn } }
 
 .css-pseudo {
-  --alpha: 1;
-  position: relative;
+	--alpha: 1;
+	position: relative;
+
+	&::before {
+		--full-cov: conic-gradient(red 0 0);
+		position: absolute;
+		inset: -6px;
+		border: inherit;
+		box-shadow: 0 0 1.5em rgb(0 0 0 / .01);
+		background: var(--ani-grad);
+		filter: blur(.5em);
+		mask:
+			var(--full-cov) no-clip subtract,
+			var(--full-cov) padding-box;
+		pointer-events: none;
+		content: ''
+	}
 }
 
-.svg-filter {
-  filter: url(#border-glow);
-}
+.svg-filter { filter: url(#border-glow) }
+.svg-grainy { filter: url(#grainy-glow) }
 
-.svg-grainy {
-  filter: url(#grainy-glow);
-}
+.svg-smooth { filter: url(#smooth-glow) }
 
-.svg-smooth {
-  filter: url(#smooth-glow);
-}
-
-.animatable {
-  transition: 1s;
-}
+.animatable { transition: 1s }
 
 .hidden {
-  opacity: 0;
-  filter: blur(2px);
-  translate: -100%;
+	opacity: 0;
+	filter: blur(2px);
+	translate: -100%
 }
+
+/* layout & prettyfying, not really relevant for demo */
+* { margin: 0 }
+
+html, body, header, footer, main, div { display: grid }
 
 body {
-  background: #3e1f47;
-  color: #fde4cf;
-  font: clamp(.75em, 2.75vw, 1.5em) sans-serif;
+	background: #3e1f47;
+	color: #fde4cf;
+	font: clamp(.75em, 2.75vw, 1.5em) genos, sans-serif
 }
 
+header, main, footer {
+	place-items: center;
+// 	min-height: 100vh;
+// 	min-height: 100dvh
+}
+
+
+
 main {
-  display: grid;
-  grid-gap: 4em;
-  padding: 2em;
+	grid-gap: 4em;
+	padding: 2em;
+  background-color: rgb(116, 64, 116);
 }
 
 .card {
-  place-content: center;
-  width: Min(100%, 21em);
-  padding: .5em;
-
-  background-color: rgba(50, 50, 150, 0.3); /* Azul semi-transparente */
-  border: 3px solid red; /* Borde rojo para ver si se aplica */
-  --ang: 90deg; /* Prueba con un ángulo fijo */
-  --ani-grad:
-    conic-gradient(from var(--ang),
-      rgba(255, 0, 0, 0.5), /* Rojo */
-      rgba(0, 255, 0, 0.5), /* Verde */
-      rgba(0, 0, 255, 0.5) /* Azul */
-    ) border-box;
-
-  border: solid 6px transparent;
-  background:
-    linear-gradient(#312244 0 0) padding-box,
-    var(--ani-grad);
-
-    position: relative;
-    --ang: 0deg;
-    --ani-grad: conic-gradient(
-      from var(--ang),
-      rgba(255, 0, 0, 0.7),  /* Rojo */
-      rgba(0, 255, 0, 0.7),  /* Verde */
-      rgba(0, 0, 255, 0.7)   /* Azul */
-    ) border-box;
-
-    border: solid 6px transparent;
-    background:
-      linear-gradient(#312244 0 0) padding-box,
-      var(--ani-grad);
-
-    animation: ang 3s linear infinite;
+	box-sizing: border-box;
+	place-content: center;
+	width: Min(100%, 21em);
+	padding: .5em;
+  color: white;
 }
-@keyframes ang {
-  0% { --ang: 0deg; }
-  100% { --ang: 360deg; }
-}
-.svg-filter {
-  filter: url(#border-glow);
-  opacity: 1 !important;
-}
+
+// h2 {
+// 	font-family: tangerine
+// }
+
+a { color: gold }
