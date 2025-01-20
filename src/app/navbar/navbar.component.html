@@ -5,7 +5,7 @@
     <div class="center-container">
 
     </div>
-    
+
     <div class="bocadillo d-flex align-items-center">
       <div class="perfil-">
       <img src="../../assets/imagenes/perfil.svg" alt="Perfil"  (click)="toggleMenu()">
@@ -26,7 +26,16 @@
             <a class="nav-link" href="#Inicio">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#Proyectos" [routerLink]="['/proyectos']">Proyectos</a>
+            <button mat-button  [matMenuTriggerFor]="Proyectos" >
+              <div class="valing-center" class="nav-link"><span>Proyecto</span>
+                <i class="material-icons">arrow_drop_down</i>
+              </div>
+            </button>
+            <mat-menu #Proyectos="matMenu">
+              <button mat-menu-item>Proyecto1</button>
+              <button mat-menu-item>Proyecto2</button>
+            </mat-menu>
+
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#Voluntarios" [routerLink]="['/voluntarios']">Voluntarios</a>
@@ -49,26 +58,26 @@
 
      <!-- Sub menu-->
 
-      
+
     </div>
     <div class="sub-menu-wrap" id="subMenu">
       <div class="sub-menu">
         <div class="user-info">
           <h2>Usuario invitado</h2>
-          
+
         </div>
         <hr>
-      
-        <a href="#" class="sub-menu-link">
+
+        <a href="#" class="sub-menu-link" href="#login"  [routerLink]="['/login']">
           <img src="../../assets/imagenes/perfil.svg" alt="">
-          <a class="nav-link" href="#login" [routerLink]="['/login']">login</a>
-   
+          <a class="nav-link" >login</a>
+
           <span>></span>
         </a>
         <a href="#" class="sub-menu-link">
           <img src="../../assets/imagenes/perfil.svg" alt="">
           <a class="nav-link" href="#login" [routerLink]="['/register']">Register</a>
-   
+
           <span>></span>
         </a>
         <a href="#" class="sub-menu-link">
@@ -84,7 +93,6 @@
       </div>
     </div>
   </div>
-  
+
 </nav>
 
-  

@@ -89,7 +89,7 @@
   max-height: 500px; /* Muestra el submenu */
 }
 .sub-menu {
-  
+
   background: #fff;
   padding: 20px;
   height: 420px;
@@ -138,6 +138,10 @@
 }
 .sub-menu-link:hover p {
   font-weight: 600;
+}
+.valing-center{
+  display:  inline-flex;
+  align-items: center;
 }
 
 @media (max-width: 992px) {
