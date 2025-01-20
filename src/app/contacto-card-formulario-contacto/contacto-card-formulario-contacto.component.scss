@@ -13,7 +13,7 @@ form {
 }
 
 h2 {
-  text-align: center; /* Asegura que el título esté centrado */
+  text-align: center; 
 }
 
 *, *:after, *:before {
@@ -25,18 +25,18 @@ img {
   display: block;
 }
 
-/* iOS Reset */
+
 input {
   appearance: none;
   border-radius: 0;
 }
 
 .container {
-  backdrop-filter: blur(30px); /* Mantiene el efecto de desenfoque */
+  backdrop-filter: blur(30px); /* Desenfoque */
 }
 
 * {
-  background: transparent; /* Hace el fondo transparente */
+  background: transparent; /* Fondo transparente */
 }
 
 .card {
@@ -44,8 +44,8 @@ input {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 400px; /* Tamaño ajustado */
-  min-height: 600px; /* Ajustado para eliminar formulario */
+  max-width: 400px;
+  min-height: 600px;
   border-radius: 10px;
   padding: 2.5rem;
   align-items: center;
