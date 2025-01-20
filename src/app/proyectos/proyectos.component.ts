@@ -5,9 +5,7 @@ import { Component, AfterViewInit } from '@angular/core';
   templateUrl: './proyectos.component.html',
   styleUrls: ['./proyectos.component.scss']
 })
-<<<<<<< HEAD
-export class ProyectosComponent {
-=======
+
 export class ProyectosComponent implements AfterViewInit {
 
   ngAfterViewInit() {
@@ -16,7 +14,7 @@ export class ProyectosComponent implements AfterViewInit {
 
   initSlider() {
     const sliderElement = document.querySelector('.slider') as HTMLElement | null;
-    
+
     if (sliderElement) {
       let isTransitioning = false;
       let slideIndex = 0;
@@ -38,5 +36,4 @@ export class ProyectosComponent implements AfterViewInit {
       console.error('No se encontró el elemento .slider o no es un HTMLElement.');
     }
   }
->>>>>>> 27304fa2078601d4e1c04fc671fbccdea1f00682
 }

@@ -1,13 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-<<<<<<< HEAD
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-=======
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; // Asegúrate de importar NgbModule
 import {MatMenuModule} from '@angular/material/menu';
 import { MatButtonModule} from '@angular/material/button';
->>>>>>> 27304fa2078601d4e1c04fc671fbccdea1f00682
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';

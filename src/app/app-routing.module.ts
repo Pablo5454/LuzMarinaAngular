@@ -50,14 +50,10 @@ const routes: Routes = [
     {path: 'voluntarios-cita-biblica', component:VoluntariosCitaBiblicaComponent},
     {path: 'voluntarios-como-ayudar', component:VoluntariosComoAyudarComponent},
     {path: 'voluntarios-nuestra-mision', component:VoluntariosNuestraMisionComponent}
-<<<<<<< HEAD
-  ]}
-  
-=======
-  ]},
- 
 
->>>>>>> 27304fa2078601d4e1c04fc671fbccdea1f00682
+  ]},
+
+
 
 ];
 
