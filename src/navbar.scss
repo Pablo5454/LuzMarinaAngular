@@ -71,14 +71,14 @@
 }
 /* Submenu */
 .sub-menu-wrap {
-  max-height: 500px; /* Aumenta el max-height para mostrar todas las opciones */
+  max-height: 500px;
   position: absolute;   /* Posiciona el submenu de forma absoluta */
   top: 110%; /* Alinea el submenu debajo del perfil */
   right: 4%; /* Alinea el submenu a la derecha */
   width: 280px; /* Ancho del submenu */
   height: auto;
-  background: #fff; /* Fondo blanco */
-  border-radius: 10px; /* Esquinas redondeadas */
+  background: #fff;
+  border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
   z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
   max-height: 0px; /* Inicialmente oculto */
@@ -88,10 +88,13 @@
 .sub-menu-wrap.open-menu {
   max-height: 500px; /* Muestra el submenu */
 }
+
 .sub-menu {
 
   background: #fff;
+
   padding: 20px;
+
   height: 420px;
 }
 .user-info {
@@ -149,18 +152,18 @@
     display: block;
   }
   .perfil-img {
-    display: none; /* Ocultar en pantallas pequeñas */
+    display: none;
   }
   .nav-center {
     flex-direction: column;
     align-items: flex-start; /* Alinea los elementos a la izquierda */
     width: 100%;
-    align-items: center; /* Centra el texto dentro de cada li */
+    align-items: center;
   }
 }
 
 @media (min-width: 992px) {
   .perfil- {
-    display: none; /* Ocultar en pantallas grandes */
+    display: none;
   }
 }
