@@ -1,0 +1,18 @@
+
+.contacto
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10%;
+  background-image: url("../../assets/imagenes/jesus_agua.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+}
+
+.image{
+  filter: blur(5px);
+}
+

@@ -1,0 +1,93 @@
+.conatiner-imagen-inicio {
+  width: 100%;
+  height: 80vh;
+  background-image: url('./assets/imagenes/imagen de fondo.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+span{
+  padding: 20px; 
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+
+
+/* Estilos generales */
+.home {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-sec-text {
+  flex: 1 1 50%;
+  padding: 80px;
+  box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total del contenedor */
+  min-width: 400px; /* Ancho mínimo para asegurar que sean responsivos */
+  align-content: center;
+}
+
+.subtitulo {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.foto-barco {
+  max-width: 85%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Añade una sombra para un mejor efecto visual */
+}
+/* Botones */
+
+.minimalista-boton {
+  
+  background-color:#000000 !important;
+  border: none;
+  color: #ffffff;
+  /* Texto azul */
+  padding: 10px 10px;
+  /* Espaciado interno del botón */
+  font-size: 16px;
+  /* Tamaño de la fuente */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  text-align: center;
+  /* Alinear el texto al centro */
+  text-decoration: none;
+  /* Sin subrayado */
+  display: inline-block;
+  /* Mostrar el botón en línea */
+  transition: background-color 1s, color 1s;
+  /* Transición suave para cambios de color */
+  margin: 15px;
+
+}
+
+.minimalista-boton:hover {
+  background-color: rgb(255, 255, 255) !important;
+  color: #000000;
+  /* Texto blanco al pasar el ratón */
+  border: none;
+
+}
+
+/* Media queries para ajustar el diseño en pantallas más pequeñas */
+@media (max-width: 1250px) {
+  .container-sec-text {
+    flex: 1 1 100%; /* Cada contenedor ocupa el 100% del ancho en pantallas pequeñas */
+  }
+  .foto-barco {
+    max-width: 60%;
+    height: auto;
+  }
+
+}

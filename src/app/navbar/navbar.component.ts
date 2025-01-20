@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-navbar',
@@ -6,5 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  isCollapsed = true;
+  constructor(private modalService: NgbModal) {}
 
+  open(content: any) {
+    this.modalService.open(content);
+  }
+
+  toggleNavbar() {
+    this.isCollapsed = !this.isCollapsed;
+  }
+
+  toggleMenu() {
+    let submenu = document.getElementById("subMenu");
+    if (submenu !== null) {
+      submenu.classList.toggle("open-menu");
+    }
+  }
 }

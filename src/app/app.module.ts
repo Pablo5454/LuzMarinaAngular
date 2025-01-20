@@ -1,6 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+<<<<<<< HEAD
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+=======
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; // Asegúrate de importar NgbModule
+import {MatMenuModule} from '@angular/material/menu';
+import { MatButtonModule} from '@angular/material/button';
+>>>>>>> 27304fa2078601d4e1c04fc671fbccdea1f00682
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -22,6 +29,10 @@ import { NoticiasTituloComponent } from './noticias-titulo/noticias-titulo.compo
 import { ContactoCardInfoComponent } from './contacto-card-info/contacto-card-info.component';
 import { ContactoCardFormularioContactoComponent } from './contacto-card-formulario-contacto/contacto-card-formulario-contacto.component';
 import { DonacionFormularioDonacionComponent } from './donacion-formulario-donacion/donacion-formulario-donacion.component';
+import { LoginComponent } from './login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegisterComponent } from './register/register.component';
+
 
 @NgModule({
   declarations: [
@@ -44,11 +55,17 @@ import { DonacionFormularioDonacionComponent } from './donacion-formulario-donac
     NoticiasTituloComponent,
     ContactoCardInfoComponent,
     ContactoCardFormularioContactoComponent,
-    DonacionFormularioDonacionComponent
+    DonacionFormularioDonacionComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

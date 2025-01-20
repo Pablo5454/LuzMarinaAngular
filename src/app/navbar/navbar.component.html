@@ -1,1 +1,98 @@
-<p>navbar works!</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-body" data-bs-theme="dark">
+  <div class="container-fluid">
+
+    <a class="nav-link" href="#"><img src="../../assets/imagenes/logo.png" alt="Logo" class="logo"></a>
+    <div class="center-container">
+
+    </div>
+
+    <div class="bocadillo d-flex align-items-center">
+      <div class="perfil-">
+      <img src="../../assets/imagenes/perfil.svg" alt="Perfil"  (click)="toggleMenu()">
+    </div>
+      <div class="boton">
+        <button class="navbar-toggler ms-2" type="button" (click)="isCollapsed = !isCollapsed" aria-controls="navbarNav"
+          [attr.aria-expanded]="!isCollapsed" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <div [ngClass]="{'collapse': isCollapsed, 'navbar-collapse': true}" id="navbarNav">
+
+      <ul class="navbar-nav">
+        <div class="nav-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#Inicio" [routerLink]="['/home']">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <button mat-button  [matMenuTriggerFor]="Proyectos" >
+              <div class="valing-center" class="nav-link"><span>Proyecto</span>
+                <i class="material-icons">arrow_drop_down</i>
+              </div>
+            </button>
+            <mat-menu #Proyectos="matMenu">
+              <button mat-menu-item>Proyecto1</button>
+              <button mat-menu-item>Proyecto2</button>
+            </mat-menu>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Voluntarios" [routerLink]="['/voluntarios']">Voluntarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Noticias" [routerLink]="['/noticias']">Noticias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto" [routerLink]="['/contacto']">Contacto</a>
+          </li>
+        </div>
+        <div class="donar-perfil d-none d-lg-flex">
+          <li class="nav-item donar">
+          </li>
+        </div>
+
+
+      </ul>
+      <img src="../../assets/imagenes/perfil.svg" alt="Perfil" class="perfil-img" (click)="toggleMenu()">
+
+     <!-- Sub menu-->
+
+
+    </div>
+    <div class="sub-menu-wrap" id="subMenu">
+      <div class="sub-menu">
+        <div class="user-info">
+          <h2>Usuario invitado</h2>
+
+        </div>
+        <hr>
+
+        <a href="#" class="sub-menu-link" href="#login"  [routerLink]="['/login']">
+          <img src="../../assets/imagenes/perfil.svg" alt="">
+          <a class="nav-link" >login</a>
+
+          <span>></span>
+        </a>
+        <a href="#" class="sub-menu-link">
+          <img src="../../assets/imagenes/perfil.svg" alt="">
+          <a class="nav-link" href="#login" [routerLink]="['/register']">Register</a>
+
+          <span>></span>
+        </a>
+        <a href="#" class="sub-menu-link">
+          <img src="../../assets/imagenes/perfil.svg" alt="">
+          <p>Edit Profile</p>
+          <span>></span>
+        </a>
+        <a href="#" class="sub-menu-link">
+          <img src="../../assets/imagenes/perfil.svg" alt="">
+          <p>Logout</p>
+          <span>></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</nav>
+

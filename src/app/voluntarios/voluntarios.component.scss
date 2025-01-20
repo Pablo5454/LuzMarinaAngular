@@ -1,0 +1,101 @@
+//Código para la animación de codepen. Cards con animación brillante
+
+@property --ang {
+	syntax: '<angle>';
+	initial-value: 0deg;
+	inherits: true
+}
+
+.card {
+	--ani-grad:
+		conic-gradient(from var(--ang),
+				rgb(from #fffa9d r g b / var(--alpha, .5)),
+				#0000 40%) border-box;
+	border: solid 6px #0000;
+	background:
+		linear-gradient(#312244 0 0) padding-box,
+		var(--ani-grad);
+	animation: ang 3s linear infinite;
+
+  min-width: 775px;
+
+  min-height: 550px;
+  margin: 1em 0;
+  padding: .75em;
+  box-sizing: border-box;
+  place-content: center;
+  color: white;
+}
+
+@keyframes ang { 0% { --ang: 1turn } }
+
+.css-pseudo {
+	--alpha: 1;
+	position: relative;
+
+	&::before {
+		--full-cov: conic-gradient(red 0 0);
+		position: absolute;
+		inset: -6px;
+		border: inherit;
+		box-shadow: 0 0 1.5em rgb(0 0 0 / .01);
+		background: var(--ani-grad);
+		filter: blur(.5em);
+		mask:
+			var(--full-cov) no-clip subtract,
+			var(--full-cov) padding-box;
+		pointer-events: none;
+		content: ''
+	}
+}
+
+.svg-filter { filter: url(#border-glow) }
+.svg-grainy { filter: url(#grainy-glow) }
+
+.svg-smooth { filter: url(#smooth-glow) }
+
+.animatable { transition: 1s }
+
+.hidden {
+	opacity: 0;
+	filter: blur(2px);
+	translate: -100%
+}
+
+/* layout & prettyfying, not really relevant for demo */
+* { margin: 0 }
+
+html, body, header, footer, main, div { display: grid }
+
+body {
+	background: #3e1f47;
+	color: #fde4cf;
+	font: clamp(.75em, 2.75vw, 1.5em) genos, sans-serif
+}
+
+header, main, footer {
+	place-items: center;
+// 	min-height: 100vh;
+// 	min-height: 100dvh
+}
+
+
+// Patrón de fondo de https://heropatterns.com/
+main {
+	grid-gap: 4em;
+	padding: 2em;
+  background-color: #a6bbe4;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80'%3E%3Cpath fill='%23e7f6f6' fill-opacity='0.4' d='M14 16H9v-2h5V9.87a4 4 0 1 1 2 0V14h5v2h-5v15.95A10 10 0 0 0 23.66 27l-3.46-2 8.2-2.2-2.9 5a12 12 0 0 1-21 0l-2.89-5 8.2 2.2-3.47 2A10 10 0 0 0 14 31.95V16zm40 40h-5v-2h5v-4.13a4 4 0 1 1 2 0V54h5v2h-5v15.95A10 10 0 0 0 63.66 67l-3.47-2 8.2-2.2-2.88 5a12 12 0 0 1-21.02 0l-2.88-5 8.2 2.2-3.47 2A10 10 0 0 0 54 71.95V56zm-39 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm40-40a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM15 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm40 40a2 2 0 1 0 0-4 2 2 0 0 0 0 4z'%3E%3C/path%3E%3C/svg%3E");
+
+}
+
+.card {
+	box-sizing: border-box;
+	place-content: center;
+	width: Min(100%, 21em);
+	padding: .5em;
+  color: white;
+}
+
+
+a { color: gold }
