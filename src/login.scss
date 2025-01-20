@@ -1,0 +1,177 @@
+.contenedor-login {
+      width: 100%;
+      height: 80vh;
+      background-image: url('./assets/imagenes/jesus_agua.png');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: #FFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+}
+
+
+
+.container-page {
+      height: 50ch;
+      width: 20vw;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      transition: 0.5s;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+}
+
+.login-contaienr {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+
+}
+
+form {
+      width: 80%;
+      margin: auto;
+}
+
+.input-line-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 100%;
+      margin: 1rem 0;
+
+
+
+}
+
+.name-input {
+      font-size: 15px;
+}
+
+
+.input-line {
+      width: 100%;
+      height: 30px;
+      background-color: transparent;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid #ffffff;
+      /* Cambio aquí */
+      outline: none;
+      margin-bottom: 1rem;
+      color: white;
+}
+
+.titulo-login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 2rem;
+
+}
+
+.titulo-login {
+
+      color: white;
+}
+
+
+
+/* Botones */
+.container-botones-login {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.boton-login {
+
+      width: 100%;
+      height: 45px;
+      border-radius: 55px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      border: none;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: 0.5s;
+
+
+}
+
+.boton-register {
+
+      width: 100%;
+      height: 45px;
+      border-radius: 55px;
+      background: transparent;
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      border: 2px solid white;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: 0.5s;
+      opacity: 0.6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+
+.boton-login:hover,
+.boton-register:hover {
+      background: rgba(255, 255, 255, 0.3);
+      color: black;
+
+
+
+}
+
+/* Media queries para responsividad */
+@media (max-width: 1024px) {
+      .container-page {
+            width: 90vw;
+      }
+
+      .input-line {
+            height: 25px;
+      }
+
+      .boton-login,
+      .boton-register {
+            height: 40px;
+      }
+}
+
+@media (max-width: 480px) {
+      .container-page {
+            width: 95vw;
+      }
+
+      .input-line {
+            height: 20px;
+      }
+
+      .boton-login,
+      .boton-register {
+            height: 35px;
+      }
+}

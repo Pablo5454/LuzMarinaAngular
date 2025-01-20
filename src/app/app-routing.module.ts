@@ -9,6 +9,9 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { NoticiasComponent } from './noticias/noticias.component';
+import { LoginComponent } from './login/login.component';
+
+import { RegisterComponent } from './register/register.component';
 import { NoticiasCardComponent } from './noticias-card/noticias-card.component';
 import { NoticiasTituloComponent } from './noticias-titulo/noticias-titulo.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
@@ -32,6 +35,8 @@ const routes: Routes = [
   {path: 'footer', component:FooterComponent},
   {path: 'home', component:HomeComponent},
   {path: 'navbar', component:NavbarComponent},
+  {path: 'login', component:LoginComponent},
+  {path: 'register', component:RegisterComponent},
   {path: 'noticias', component:NoticiasComponent, children:[
     {path: 'noticias-card', component:NoticiasCardComponent},
     {path: 'noticias-titulo', component:NoticiasTituloComponent}
@@ -45,8 +50,14 @@ const routes: Routes = [
     {path: 'voluntarios-cita-biblica', component:VoluntariosCitaBiblicaComponent},
     {path: 'voluntarios-como-ayudar', component:VoluntariosComoAyudarComponent},
     {path: 'voluntarios-nuestra-mision', component:VoluntariosNuestraMisionComponent}
+<<<<<<< HEAD
   ]}
   
+=======
+  ]},
+ 
+
+>>>>>>> 27304fa2078601d4e1c04fc671fbccdea1f00682
 
 ];
 

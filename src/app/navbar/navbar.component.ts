@@ -8,7 +8,6 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class NavbarComponent {
   isCollapsed = true;
-
   constructor(private modalService: NgbModal) {}
 
   open(content: any) {
@@ -17,5 +16,12 @@ export class NavbarComponent {
 
   toggleNavbar() {
     this.isCollapsed = !this.isCollapsed;
+  }
+
+  toggleMenu() {
+    let submenu = document.getElementById("subMenu");
+    if (submenu !== null) {
+      submenu.classList.toggle("open-menu");
+    }
   }
 }
