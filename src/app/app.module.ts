@@ -1,3 +1,4 @@
+//se declaran todos los componentes, servicios y módulos que utilizan
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 

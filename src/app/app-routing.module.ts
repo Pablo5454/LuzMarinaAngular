@@ -1,3 +1,4 @@
+//Aqui van todas las rutas donde deben cargarse los componentes
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContactoComponent } from './contacto/contacto.component';

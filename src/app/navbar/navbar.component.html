@@ -8,7 +8,7 @@
 
     <div class="bocadillo d-flex align-items-center">
       <div class="perfil-">
-      <img src="../../assets/imagenes/perfil.svg" alt="Perfil"  (click)="toggleMenu()">
+      <img src="../../assets/imagenes/profile.svg" alt="Perfil"  (click)="toggleMenu()">
     </div>
       <div class="boton">
         <button class="navbar-toggler ms-2" type="button" (click)="isCollapsed = !isCollapsed" aria-controls="navbarNav"
@@ -26,16 +26,14 @@
             <a class="nav-link" href="#Inicio" [routerLink]="['/home']">Inicio</a>
           </li>
           <li class="nav-item">
-            <button mat-button  [matMenuTriggerFor]="Proyectos" >
-              <div class="valing-center" class="nav-link"><span>Proyecto</span>
-                <i class="material-icons">arrow_drop_down</i>
-              </div>
-            </button>
+            <a class="nav-link" [matMenuTriggerFor]="Proyectos">
+              Proyectos
+              <img src="/assets/imagenes/arrow_down.svg" alt="Arrow Icon" class="icon-svg" />
+            </a>
             <mat-menu #Proyectos="matMenu">
               <button mat-menu-item>Proyecto1</button>
               <button mat-menu-item>Proyecto2</button>
             </mat-menu>
-
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#Voluntarios" [routerLink]="['/voluntarios']">Voluntarios</a>
@@ -54,43 +52,8 @@
 
 
       </ul>
-      <img src="../../assets/imagenes/perfil.svg" alt="Perfil" class="perfil-img" (click)="toggleMenu()">
+      <img src="../../assets/imagenes/profile.svg" alt="Perfil" class="perfil-img" href="#login" [routerLink]="['/login']">
 
-     <!-- Sub menu-->
-
-
-    </div>
-    <div class="sub-menu-wrap" id="subMenu">
-      <div class="sub-menu">
-        <div class="user-info">
-          <h2>Usuario invitado</h2>
-
-        </div>
-        <hr>
-
-        <a href="#" class="sub-menu-link" href="#login"  [routerLink]="['/login']">
-          <img src="../../assets/imagenes/perfil.svg" alt="">
-          <a class="nav-link" >login</a>
-
-          <span>></span>
-        </a>
-        <a href="#" class="sub-menu-link">
-          <img src="../../assets/imagenes/perfil.svg" alt="">
-          <a class="nav-link" href="#login" [routerLink]="['/register']">Register</a>
-
-          <span>></span>
-        </a>
-        <a href="#" class="sub-menu-link">
-          <img src="../../assets/imagenes/perfil.svg" alt="">
-          <p>Edit Profile</p>
-          <span>></span>
-        </a>
-        <a href="#" class="sub-menu-link">
-          <img src="../../assets/imagenes/perfil.svg" alt="">
-          <p>Logout</p>
-          <span>></span>
-        </a>
-      </div>
     </div>
   </div>
 
