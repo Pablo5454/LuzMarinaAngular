@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ProyectosTextoComponent } from '../proyectos-texto/proyectos-texto.component';
 
 @Component({
   selector: 'app-navbar',
@@ -7,8 +8,9 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  
   isCollapsed = true;
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal, private proyectosTextoComponent: ProyectosTextoComponent) {}
 
   open(content: any) {
     this.modalService.open(content);
@@ -24,4 +26,14 @@ export class NavbarComponent {
       submenu.classList.toggle("open-menu");
     }
   }
+
+  toggleDropdown(event: any) {
+    event.preventDefault();
+    let dropdown = event.target.nextElementSibling;
+    if (dropdown !== null) {
+      dropdown.classList.toggle("open-dropdown");
+    }
+  }
+
+ 
 }

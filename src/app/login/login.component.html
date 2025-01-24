@@ -1,31 +1,52 @@
 <div class="contenedor-login">
       <div class="container-page">
-            <div class="login-conatiner">
-                  <div class="titulo-login-container">
-                  <h1 class="titulo-login">Login</h1>
-                  </div>
-                  <form action="">
-                        <div class="login-container" id="LoginContainer">
-                              <span class="name-input">Usuario</span>
-                              <input type="text" class="input-line">
-
-                        </div>
-                        <div class="login-container" id="LoginContainer">
-                              <span class="name-input">Contraseña</span>
-                              <input type="password" class="input-line">
-
-                             
-
-                        </div>
-                        <div class="container-botones-login">
-                              <button class="boton-login " >Login</button>
-                              
-                        </div>
-                        <div class="container-botones-login">
-                              <button class="boton-register " href="#login" [routerLink]="['/register']">Registrarse</button>
-                              
-                        </div>
-                  </form>
+        <div class="login-container">
+          <div class="titulo-login-container">
+            <h1 class="titulo-login">Login</h1>
+          </div>
+          <form (submit)="verificarCredenciales()">
+            <!-- Campo Usuario -->
+            <div class="login-container">
+              <span class="name-input">Usuario</span>
+              <input 
+                type="text" 
+                class="input-line" 
+                [(ngModel)]="usuarioInput" 
+                name="usuario" 
+                required 
+              />
             </div>
+    
+            <!-- Campo Contraseña -->
+            <div class="login-container">
+              <span class="name-input">Contraseña</span>
+              <input 
+                type="password" 
+                class="input-line" 
+                [(ngModel)]="passwordInput" 
+                name="password" 
+                required 
+              />
+            </div>
+    
+            <!-- Botones -->
+            <div class="container-botones-login">
+              <button 
+                type="submit" 
+                class="boton-login">
+                Login
+              </button>
+            </div>
+            <div class="container-botones-login">
+              <button 
+                type="button" 
+                class="boton-register" 
+                [routerLink]="['/register']">
+                Registrarse
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-</div>
+    </div>
+F    

@@ -22,6 +22,8 @@ import { VoluntariosBotonDonacionComponent } from './voluntarios-boton-donacion/
 import { VoluntariosCitaBiblicaComponent } from './voluntarios-cita-biblica/voluntarios-cita-biblica.component';
 import { VoluntariosComoAyudarComponent } from './voluntarios-como-ayudar/voluntarios-como-ayudar.component';
 import { VoluntariosNuestraMisionComponent } from './voluntarios-nuestra-mision/voluntarios-nuestra-mision.component';
+import { RescatadosComponent } from './rescatados/rescatados.component';
+
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -37,6 +39,8 @@ const routes: Routes = [
   {path: 'navbar', component:NavbarComponent},
   {path: 'login', component:LoginComponent},
   {path: 'register', component:RegisterComponent},
+  {path: 'rescatados', component:RescatadosComponent},
+
   {path: 'noticias', component:NoticiasComponent, children:[
     {path: 'noticias-card', component:NoticiasCardComponent},
     {path: 'noticias-titulo', component:NoticiasTituloComponent}

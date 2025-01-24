@@ -35,4 +35,6 @@ export class ProyectosComponent implements AfterViewInit {
       console.error('No se encontró el elemento .slider o no es un HTMLElement.');
     }
   }
+  selectedProject: string = ''; // Add this line 
+  toggleDropdown(event: any) { this.selectedProject = event.target.innerText; }
 }

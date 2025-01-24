@@ -5,11 +5,11 @@
     <div class="center-container">
 
     </div>
-    
+
     <div class="bocadillo d-flex align-items-center">
       <div class="perfil-">
-      <img src="../../assets/imagenes/perfil.svg" alt="Perfil"  (click)="toggleMenu()">
-    </div>
+        <img src="../../assets/imagenes/perfil.svg" alt="Perfil" (click)="toggleMenu()">
+      </div>
       <div class="boton">
         <button class="navbar-toggler ms-2" type="button" (click)="isCollapsed = !isCollapsed" aria-controls="navbarNav"
           [attr.aria-expanded]="!isCollapsed" aria-label="Toggle navigation">
@@ -25,14 +25,21 @@
           <li class="nav-item">
             <a class="nav-link" href="#Inicio">Inicio</a>
           </li>
+
+         <button mat-button [matMenuTriggerFor]="proytectos">
+          <div class="valign-center" >
+            <a class="nav-link">Proyectos</a>
+            <i class="material-icons">arrow_drop_down</i>
+          </div>
+         </button>
+          <mat-menu #proytectos="matMenu">
+            <button mat-menu-item [routerLink]="['/proyectos']" > Proyectos1 </button>
+            <button mat-menu-item [routerLink]="['/proyectos']" > Proyectos2 </button>
+            <button mat-menu-item [routerLink]="['/proyectos']"> Proyectos3 </button>
+            
+           </mat-menu>
           <li class="nav-item">
-            <a class="nav-link" href="#Proyectos" [routerLink]="['/proyectos']">Proyectos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Voluntarios" [routerLink]="['/voluntarios']">Voluntarios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Noticias" [routerLink]="['/noticias']">Noticias</a>
+            <button class="nav-link" href="#Noticias" [routerLink]="['/noticias']">Noticias</button>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contacto" [routerLink]="['/contacto']">Contacto</a>
@@ -47,28 +54,28 @@
       </ul>
       <img src="../../assets/imagenes/perfil.svg" alt="Perfil" class="perfil-img" (click)="toggleMenu()">
 
-     <!-- Sub menu-->
+      <!-- Sub menu-->
 
-      
+
     </div>
     <div class="sub-menu-wrap" id="subMenu">
       <div class="sub-menu">
         <div class="user-info">
           <h2>Usuario invitado</h2>
-          
+
         </div>
         <hr>
-      
+
         <a href="#" class="sub-menu-link">
           <img src="../../assets/imagenes/perfil.svg" alt="">
           <a class="nav-link" href="#login" [routerLink]="['/login']">login</a>
-   
+
           <span>></span>
         </a>
         <a href="#" class="sub-menu-link">
           <img src="../../assets/imagenes/perfil.svg" alt="">
           <a class="nav-link" href="#login" [routerLink]="['/register']">Register</a>
-   
+
           <span>></span>
         </a>
         <a href="#" class="sub-menu-link">
@@ -84,7 +91,5 @@
       </div>
     </div>
   </div>
-  
-</nav>
 
-  
+</nav>

@@ -26,6 +26,12 @@ import { DonacionFormularioDonacionComponent } from './donacion-formulario-donac
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './register/register.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { RescatadosComponent } from './rescatados/rescatados.component';
+import { FormsModule } from '@angular/forms';
+import { RescatadosModificarComponent } from './rescatados-modificar/rescatados-modificar.component';
+import { HttpClientModule } from '@angular/common/http'; // Importar HttpClientModule
 
 @NgModule({
   declarations: [
@@ -50,15 +56,22 @@ import { RegisterComponent } from './register/register.component';
     ContactoCardFormularioContactoComponent,
     DonacionFormularioDonacionComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    RescatadosComponent,
+    RescatadosModificarComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatMenuModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProyectosTextoComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
