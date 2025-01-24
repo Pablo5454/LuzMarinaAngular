@@ -1,0 +1,18 @@
+/* nombre-del-componente.component.css */
+h2 {
+   
+    font-size: 24px; /* Tamaño del texto */
+    margin-bottom: 10px; /* Espaciado inferior */
+    text-align: center; /* Centrando el título */
+    color: #3f139f;
+}
+
+span {
+    font-family: Arial, sans-serif; /* Tipo de letra */
+    font-size: 16px; /* Tamaño del texto */
+   margin-left: 100px;
+   margin-right: 100px;
+    line-height: 1.5; /* Altura de línea */
+    text-align: center; /* Centrando el párrafo */
+    display: block; /* Necesario para centrar el bloque */
+}
