@@ -1,42 +1,65 @@
-[
-    {
-      "id": 1,
-      "titulo": "Rescate en condiciones extremas cerca del Estrecho de Gibraltar",
-      "cuerpo": "El equipo de salvamento marítimo llevó a cabo una operación de alto riesgo para rescatar a 15 personas de una embarcación a la deriva en el Estrecho de Gibraltar. Los fuertes vientos y el oleaje dificultaron las maniobras, pero finalmente lograron trasladar a todos los ocupantes a un lugar seguro. Los rescatados, que llevaban más de 24 horas sin agua ni alimentos, fueron atendidos por personal médico en el puerto cercano."
-    },
-    {
-      "id": 2,
-      "titulo": "Pesquero rescatado tras hundimiento por avería en el motor",
-      "cuerpo": "Un barco pesquero con seis tripulantes comenzó a hundirse a 18 millas de la costa de Vigo tras una falla en el motor que dejó la embarcación sin control en medio del fuerte oleaje. El servicio de salvamento marítimo respondió rápidamente al aviso de emergencia y desplegó un helicóptero y un remolcador. Los pescadores, que llevaban chalecos salvavidas, fueron izados a salvo mientras la embarcación fue remolcada de vuelta al puerto."
-    },
-    {
-      "id": 3,
-      "titulo": "Niños rescatados de un barco recreativo en llamas",
-      "cuerpo": "Un equipo de salvamento actuó con rapidez para rescatar a una familia, incluidos tres niños pequeños, de un barco recreativo que se incendió a 5 millas de la costa de Alicante. Afortunadamente, todos los ocupantes llevaban chalecos salvavidas y lograron saltar al agua antes de que las llamas consumieran la embarcación. Fueron rescatados por una lancha de intervención rápida y trasladados al puerto, donde recibieron atención médica."
-    },
-    {
-      "id": 4,
-      "titulo": "Milagroso rescate de un navegante solitario en alta mar",
-      "cuerpo": "Un navegante solitario fue rescatado tras emitir una señal de socorro desde su velero, que quedó sin mástil y con vías de agua a 40 millas de la costa de Mallorca. El hombre, de 57 años, llevaba varios días a la deriva sin comunicación estable. El equipo de salvamento lo encontró gracias a la localización de un transmisor de emergencia y logró estabilizar el velero antes de remolcarlo al puerto. El navegante se mostró agradecido y en buen estado de salud."
-    },
-    {
-      "id": 5,
-      "titulo": "Rescate masivo de 30 personas en el Mediterráneo",
-      "cuerpo": "En una operación conjunta con ONGs, el servicio de salvamento marítimo logró rescatar a 30 personas que viajaban en una embarcación sobrecargada en el Mediterráneo. La situación era crítica, ya que la lancha neumática estaba comenzando a desinflarse y los ocupantes no llevaban chalecos salvavidas. Durante la operación, que duró más de tres horas, se distribuyeron mantas y alimentos a los rescatados antes de trasladarlos a un centro de acogida."
-    },
-    {
-      "id": 6,
-      "titulo": "Un perro y su dueño rescatados tras volcadura de kayak",
-      "cuerpo": "Un hombre de 34 años y su perro fueron rescatados tras volcar su kayak en las aguas agitadas de la ría de Bilbao. La rápida intervención de los socorristas permitió localizar al hombre, que se había aferrado a una boya junto a su mascota. Ambos fueron trasladados a tierra firme, donde el hombre recibió atención médica por hipotermia. El perro, que llevaba un chaleco flotador especial, no sufrió lesiones y fue devuelto sano y salvo a su dueño."
-    },
-    {
-      "id": 7,
-      "titulo": "Evacuación médica de un marinero herido en un carguero",
-      "cuerpo": "Un helicóptero de salvamento marítimo realizó una evacuación médica de emergencia para un marinero que sufrió una fractura en la pierna mientras trabajaba en un carguero a 50 millas de la costa de Tarragona. La operación, que se realizó en condiciones meteorológicas adversas, implicó una maniobra compleja para izar al paciente desde la cubierta del barco hasta el helicóptero. El marinero fue trasladado a un hospital, donde recibió tratamiento especializado."
-    },
-    {
-      "id": 8,
-      "titulo": "Rescate de dos windsurfistas atrapados por una tormenta",
-      "cuerpo": "Dos windsurfistas fueron rescatados tras quedar atrapados en una tormenta repentina en las aguas de Tarifa. Las ráfagas de viento y las olas impidieron que regresaran a la playa, por lo que tuvieron que aferrarse a sus tablas durante más de una hora. Los socorristas marítimos llegaron rápidamente en una moto de agua equipada y lograron remolcar a los deportistas hasta la orilla. Ambos estaban exhaustos pero ilesos, y agradecieron la intervención oportuna."
-    }
-  ]
+[  {
+    "id": 1,
+    "titulo": "Rescate en condiciones extremas cerca del Estrecho de Gibraltar",
+    "cuerpo": "El equipo de salvamento marítimo llevó a cabo una operación de alto riesgo para rescatar a 15 personas de una embarcación a la deriva en el Estrecho de Gibraltar...",
+    "resumen": "Rescate de 15 personas en condiciones climáticas adversas en Gibraltar.",
+    "fecha": "2025-01-15",
+    "imagen": "/assets/imagenes/noticia.jpg"
+  },
+  {
+    "id": 2,
+    "titulo": "Pesquero rescatado tras hundimiento por avería en el motor",
+    "cuerpo": "Un barco pesquero con seis tripulantes comenzó a hundirse a 18 millas de la costa de Vigo...",
+    "resumen": "Rescate de seis pescadores tras el hundimiento de su barco en Vigo.",
+    "fecha": "2025-01-12",
+    "imagen": "/assets/imagenes/noticia2.jpg"
+  },
+  {
+    "id": 3,
+    "titulo": "Niños rescatados de un barco recreativo en llamas",
+    "cuerpo": "Un equipo de salvamento actuó con rapidez para rescatar a una familia, incluidos tres niños pequeños, de un barco recreativo que se incendió a 5 millas de la costa de Alicante...",
+    "resumen": "Familia rescatada tras incendio en barco recreativo cerca de Alicante.",
+    "fecha": "2025-01-10",
+    "imagen": "/assets/imagenes/noticia3.jpg"
+  },
+  {
+    "id": 4,
+    "titulo": "Milagroso rescate de un navegante solitario en alta mar",
+    "cuerpo": "Un navegante solitario fue rescatado tras emitir una señal de socorro desde su velero...",
+    "resumen": "Rescate de navegante solitario a la deriva cerca de Mallorca.",
+    "fecha": "2025-01-05",
+    "imagen": "/assets/imagenes/noticia4.avif"
+  },
+  {
+    "id": 5,
+    "titulo": "Rescate masivo de 30 personas en el Mediterráneo",
+    "cuerpo": "En una operación conjunta con ONGs, el servicio de salvamento marítimo logró rescatar a 30 personas...",
+    "resumen": "Salvamento de 30 personas en una embarcación sobrecargada en el Mediterráneo.",
+    "fecha": "2025-01-03",
+    "imagen": "/assets/imagenes/noticia5.jpeg"
+  },
+  {
+    "id": 6,
+    "titulo": "Un perro y su dueño rescatados tras volcadura de kayak",
+    "cuerpo": "Un hombre de 34 años y su perro fueron rescatados tras volcar su kayak en las aguas agitadas de la ría de Bilbao...",
+    "resumen": "Hombre y su perro rescatados tras volcadura de kayak en Bilbao.",
+    "fecha": "2025-01-02",
+    "imagen": "/assets/imagenes/noticia6.jpg"
+  },
+  {
+    "id": 7,
+    "titulo": "Evacuación médica de un marinero herido en un carguero",
+    "cuerpo": "Un helicóptero de salvamento marítimo realizó una evacuación médica de emergencia para un marinero...",
+    "resumen": "Evacuación de marinero herido desde carguero en alta mar cerca de Tarragona.",
+    "fecha": "2024-12-31",
+    "imagen": "/assets/imagenes/noticia7.jpg"
+  },
+  {
+    "id": 8,
+    "titulo": "Rescate de dos windsurfistas atrapados por una tormenta",
+    "cuerpo": "Dos windsurfistas fueron rescatados tras quedar atrapados en una tormenta repentina en las aguas de Tarifa...",
+    "resumen": "Windsurfistas atrapados en tormenta rescatados en las aguas de Tarifa.",
+    "fecha": "2024-12-30",
+    "imagen": "/assets/imagenes/noticia8.jpg"
+  }
+]
