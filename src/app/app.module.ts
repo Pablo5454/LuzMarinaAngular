@@ -2,7 +2,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; // Asegúrate de importar NgbModule
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
 import {MatMenuModule} from '@angular/material/menu';
 import { MatButtonModule} from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
