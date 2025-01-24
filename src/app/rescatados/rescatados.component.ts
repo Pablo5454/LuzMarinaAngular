@@ -13,7 +13,7 @@ export class RescatadosComponent implements OnInit {
 
   rescatados: Rescatado[] = []; // Lista para almacenar los rescatados
   nuevoRescatado: Rescatado = {
-    id: 0,
+    id: "",
     nombre: '',
     foto: '',
     edad: 0,
@@ -55,6 +55,17 @@ export class RescatadosComponent implements OnInit {
    * Método para crear un nuevo rescatado.
    */
   crearRescatado(): void {
+    // Obtener el próximo ID disponible
+    const maxId = this.rescatados.length > 0
+      ? Math.max(...this.rescatados.map(rescatado => parseInt(rescatado.id || '0')))
+      : 0;
+
+    // Generar un nuevo ID incrementado
+    const nuevoId = (maxId + 1).toString();
+
+    // Asignar el nuevo ID al rescatado
+    this.nuevoRescatado.id = nuevoId;
+
     this.rescatadosService.addRescatado(this.nuevoRescatado).subscribe(
       () => {
         alert('Rescatado creado exitosamente.');
@@ -68,10 +79,11 @@ export class RescatadosComponent implements OnInit {
     );
   }
 
+
   /**
    * Método para eliminar un rescatado.
    */
-  eliminarRescatado(id: number): void {
+  eliminarRescatado(id: string): void {
     if (confirm('¿Estás seguro de que deseas eliminar este rescatado?')) {
       this.rescatadosService.deleteRescatado(id).subscribe(
         () => {
@@ -124,7 +136,7 @@ export class RescatadosComponent implements OnInit {
    */
   resetFormulario(): void {
     this.nuevoRescatado = {
-      id: 0,
+      id: "",
       nombre: '',
       foto: '',
       edad: 0,

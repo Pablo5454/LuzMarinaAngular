@@ -1,43 +1,17 @@
 {
   "rescatados": [
     {
-      "id": "1",
-      "nombre": "Luna García",
-      "foto": "luna_garcia.jpg",
-      "edad": 4,
-      "sexo": "Hembra",
-      "procedencia": "Barrio Central",
-      "valoracion_medica": "Desnutrición leve",
-      "medico_id": 3,
-      "rescate_id": 1,
-      "created_at": "2025-01-22 10:45:00",
-      "updated_at": "2025-01-22 10:45:00"
-    },
-    {
-      "id": "2",
-      "nombre": "Simón Pérez",
-      "foto": "simon_perez.jpg",
-      "edad": 2,
-      "sexo": "Macho",
-      "procedencia": "Colonia Las Flores",
-      "valoracion_medica": "Fractura en la pata derecha",
-      "medico_id": 4,
-      "rescate_id": 2,
-      "created_at": "2025-01-22 11:30:00",
-      "updated_at": "2025-01-22 11:30:00"
-    },
-    {
-      "id": "3",
-      "nombre": "Bella López",
-      "foto": "bella_lopez.jpg",
-      "edad": 6,
-      "sexo": "Hembra",
-      "procedencia": "Parque Central",
-      "valoracion_medica": "Buen estado de salud",
-      "medico_id": 2,
-      "rescate_id": 3,
-      "created_at": "2025-01-22 12:15:00",
-      "updated_at": "2025-01-22 12:15:00"
+      "id": "7",
+      "nombre": "teresa",
+      "foto": "dads",
+      "edad": 42343,
+      "sexo": "Mujer",
+      "procedencia": "africa",
+      "valoracion_medica": "pierna rota",
+      "medico_id": 0,
+      "rescate_id": 0,
+      "created_at": "",
+      "updated_at": ""
     }
   ]
 }

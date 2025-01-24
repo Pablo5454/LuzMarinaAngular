@@ -1,5 +1,5 @@
 export interface Rescatado {
-      id: number;
+  id: string;
       nombre: string;
       foto: string;
       edad: number;
@@ -11,4 +11,3 @@ export interface Rescatado {
       created_at: string;
       updated_at: string;
     }
-    
