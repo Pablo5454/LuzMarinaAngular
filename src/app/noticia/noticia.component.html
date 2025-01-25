@@ -1,125 +1,49 @@
 <div class="wrapper">
-    <h1>Parallax Flipping Cards</h1>
+    <h1>Actualidad</h1>
     <div class="cols">
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-            <div class="container">
-                <div class="front" style="background-image: url(/assets/imagenes/noticia.jpg);">
-                    <div class="inner">
-                        <p>Diligord</p>
-                        <span>Lorem ipsum</span>
-                    </div>
-                </div>
-                <div class="back">
-                    <div class="inner">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
-                    </div>
-                </div>
+      <div
+        class="col"
+        *ngFor="let noticia of noticias"
+        ontouchstart="this.classList.toggle('hover');"
+      >
+        <div class="container">
+          <!-- Imagen de fondo -->
+          <div class="front" [style.background-image]="'url(' + noticia.imagen + ')'">
+            <div class="inner">
+              <!-- Título -->
+              <p>{{ noticia.titulo }}</p>
+              <!-- Fecha -->
+              <span>{{ noticia.fecha }}</span>
             </div>
-        </div>
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-            <div class="container">
-                <div class="front" style="background-image: url(assets/imagenes/noticia2.jpg);">
-                    <div class="inner">
-                        <p>Rocogged</p>
-                        <span>Lorem ipsum</span>
-                    </div>
-                </div>
-                <div class="back">
-                    <div class="inner">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
-                    </div>
-                </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <!-- Resumen -->
+              <p>{{ noticia.resumen }}</p>
+              <button (click)="openModal(noticia)">Ver más</button>
             </div>
+          </div>
         </div>
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-            <div class="container">
-                <div class="front" style="background-image: url(/assets/imagenes/noticia3.jpg);">
-                    <div class="inner">
-                        <p>Strizzes</p>
-                        <span>Lorem ipsum</span>
-                    </div>
-                </div>
-                <div class="back">
-                    <div class="inner">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-            <div class="container">
-                <div class="front" style="background-image: url(/assets/imagenes/noticia4.avif);">
-                    <div class="inner">
-                        <p>Clossyo</p>
-                        <span>Lorem ipsum</span>
-                    </div>
-                </div>
-                <div class="back">
-                    <div class="inner">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-            <div class="container">
-                <div class="front" style="background-image: url(/assets/imagenes/noticia5.jpeg);">
-                    <div class="inner">
-                        <p>Rendann</p>
-                        <span>Lorem ipsum</span>
-                    </div>
-                </div>
-                <div class="back">
-                    <div class="inner">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-            <div class="container">
-                <div class="front" style="background-image: url(/assets/imagenes/noticia6.jpg);">
-                    <div class="inner">
-                        <p>Acirassi</p>
-                        <span>Lorem ipsum</span>
-                    </div>
-                </div>
-                <div class="back">
-                    <div class="inner">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-            <div class="container">
-                <div class="front" style="background-image: url(/assets/imagenes/noticia7.jpg);">
-                    <div class="inner">
-                        <p>Sohanidd</p>
-                        <span>Lorem ipsum</span>
-                    </div>
-                </div>
-                <div class="back">
-                    <div class="inner">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-            <div class="container">
-                <div class="front" style="background-image: url(/assets/imagenes/noticia8.jpg);">
-                    <div class="inner">
-                        <p>Sohanidd</p>
-                        <span>Lorem ipsum</span>
-                    </div>
-                </div>
-                <div class="back">
-                    <div class="inner">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
+  <div
+  class="modal"
+  *ngIf="selectedNoticia"
+  (click)="closeModal()"
+>
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <!-- Botón de cierre -->
+    <span class="close" (click)="closeModal()">&times;</span>
+
+    <!-- Título de la noticia -->
+    <h2>{{ selectedNoticia.titulo }}</h2>
+
+    <!-- Imagen de la noticia -->
+    <img [src]="selectedNoticia.imagen" alt="Imagen de {{ selectedNoticia.titulo }}" />
+
+    <!-- Cuerpo de la noticia -->
+    <p>{{ selectedNoticia.cuerpo }}</p>
+  </div>
 </div>
+        
