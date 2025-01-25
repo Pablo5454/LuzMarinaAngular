@@ -28,7 +28,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './register/register.component';
 import { NoticiaComponent } from './noticia/noticia.component';
 import { NoticiaIndividualComponent } from './noticia-individual/noticia-individual.component';
-
+import { RescatadosComponent } from './rescatados/rescatados.component';
+import { RescatadosModificarComponent } from './rescatados-modificar/rescatados-modificar.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -53,7 +56,9 @@ import { NoticiaIndividualComponent } from './noticia-individual/noticia-individ
     LoginComponent,
     RegisterComponent,
     NoticiaComponent,
-    NoticiaIndividualComponent
+    NoticiaIndividualComponent,
+    RescatadosComponent,
+    RescatadosModificarComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +66,9 @@ import { NoticiaIndividualComponent } from './noticia-individual/noticia-individ
     NgbModule,
     BrowserAnimationsModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

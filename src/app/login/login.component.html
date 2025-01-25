@@ -4,15 +4,27 @@
                   <div class="titulo-login-container">
                   <h1 class="titulo-login">Login</h1>
                   </div>
-                  <form action="">
+                  <form (submit)="verificarCredenciales()">
                         <div class="login-container" id="LoginContainer">
                               <span class="name-input">Usuario</span>
-                              <input type="text" class="input-line">
+                              <input 
+                              type="text" 
+                              class="input-line" 
+                              [(ngModel)]="usuarioInput" 
+                              name="usuario" 
+                              required 
+                            />
 
                         </div>
                         <div class="login-container" id="LoginContainer">
                               <span class="name-input">Contraseña</span>
-                              <input type="password" class="input-line">
+                              <input 
+                              type="password" 
+                              class="input-line" 
+                              [(ngModel)]="passwordInput" 
+                              name="password" 
+                              required 
+                            />
 
                              
 

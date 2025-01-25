@@ -1,0 +1,48 @@
+<table class="table table-hover table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Foto</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Sexo</th>
+          <th scope="col">Procedencia</th>
+          <th scope="col">Valoración Médica</th>
+          <th scope="col">Acciones</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Fila para agregar un nuevo rescatado -->
+        <tr>
+          <th scope="row">Nuevo</th>
+          <td><input class="form-control" type="text" placeholder="Nombre" [(ngModel)]="nuevoRescatado.nombre" required></td>
+          <td><input class="form-control" type="text" placeholder="Foto" [(ngModel)]="nuevoRescatado.foto" required></td>
+          <td><input class="form-control" type="number" placeholder="Edad" [(ngModel)]="nuevoRescatado.edad" required></td>
+          <td>
+            <select class="form-control" [(ngModel)]="nuevoRescatado.sexo" required>
+              <option value="Masculino">Masculino</option>
+              <option value="Femenino">Femenino</option>
+            </select>
+          </td>
+          <td><input class="form-control" type="text" placeholder="Procedencia" [(ngModel)]="nuevoRescatado.procedencia" required></td>
+          <td><input class="form-control" type="text" placeholder="Valoración Médica" [(ngModel)]="nuevoRescatado.valoracion_medica" required></td>
+          <td><button class="btn btn-secondary" (click)="crearRescatado()">Crear</button></td>
+          <td><button class="btn btn-primary" (click)="resetFormulario()">Limpiar</button></td>
+        </tr>
+    
+        <!-- Fila para mostrar la lista de rescatados -->
+        <tr *ngFor="let rescatado of rescatados">
+          <th scope="row">{{rescatado.id}}</th>
+          <td>{{rescatado.nombre}}</td>
+          <td>{{rescatado.foto}}</td>
+          <td>{{rescatado.edad}}</td>
+          <td>{{rescatado.sexo}}</td>
+          <td>{{rescatado.procedencia}}</td>
+          <td>{{rescatado.valoracion_medica}}</td>
+          <td><button class="btn btn-danger" (click)="eliminarRescatado(rescatado.id)">Eliminar</button></td>
+          <td><button class="btn btn-success" (click)="IrAModificarRescatado(rescatado)">Modificar</button></td>
+        </tr>
+      </tbody>
+    </table>
+    
