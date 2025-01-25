@@ -40,4 +40,7 @@ export class LoginComponent {
     this.usuarios.push({ nombre_usuario, password, es_admin });
     console.log('Usuarios guardados:', this.usuarios);
   }
+  irAregister(): void {
+    this.router.navigate(['/register']);
+  }
 }

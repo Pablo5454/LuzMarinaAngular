@@ -30,11 +30,11 @@
 
                         </div>
                         <div class="container-botones-login">
-                              <button class="boton-login " >Login</button>
+                              <button class="boton-login " type="submit">Login</button>
                               
                         </div>
                         <div class="container-botones-login">
-                              <button class="boton-register " href="#login" [routerLink]="['/register']">Registrarse</button>
+                              <button class="boton-register " (click)="irAregister()">Register</button>
                               
                         </div>
                   </form>

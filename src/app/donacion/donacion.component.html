@@ -1,74 +1,10 @@
-svg(width='0' height='0' aria-hidden='true')
-	filter#border-glow(color-interpolation-filters='sRGB'
-			x='-50%' y='-50%' width='200%' height='200%')
-		feComponentTransfer(result='box')
-			feFuncA(type='table' tableValues='0 0 1')
-		feComponentTransfer(in='SourceGraphic' result='border')
-			feFuncA(type='table' tableValues='0 1 0')
-		feBlend(in='box' result='full')
-		feMorphology(in='border' operator='dilate' radius='12')
-		feComposite(in2='full' operator='in')
-		feGaussianBlur(stdDeviation='12')
-		feBlend(in='full')
+<div class="container-donacion">
+	<img *ngIf="showGif" [src]="gifUrl" alt="Gif en el padre">
 
-	filter#grainy-glow(color-interpolation-filters='sRGB'
-			x='-50%' y='-50%' width='200%' height='200%')
-		feComponentTransfer(result='box')
-			feFuncA(type='table' tableValues='0 0 1')
-		feComponentTransfer(in='SourceGraphic' result='border')
-			feFuncA(type='table' tableValues='0 1 0')
-		feBlend(in='box' result='full')
-		feMorphology(in='border' operator='dilate' radius='12')
-		feComposite(in2='full' operator='in')
-		feGaussianBlur(stdDeviation='12' result='blur')
-		feTurbulence(type='fractalNoise' baseFrequency='7.13')
-		feDisplacementMap(in='blur' scale='8' yChannelSelector='R')
-		feBlend(in='full')
 
-	filter#smooth-glow(color-interpolation-filters='sRGB'
-			x='-50%' y='-50%' width='200%' height='200%')
-		feComponentTransfer
-			feFuncA(type='table' tableValues='0 0 1')
-		feGaussianBlur(stdDeviation='2')
-		feComponentTransfer
-			feFuncA(type='table' tableValues='-2 3')
-		feComposite(in='SourceGraphic' operator='in' result='box')
-		feComponentTransfer(in='SourceGraphic' result='border')
-			feFuncA(type='table' tableValues='0 1 0')
-		feComponentTransfer
-			feFuncA(type='linear' slope='9999')
-		feGaussianBlur(stdDeviation='3')
-		feComponentTransfer(result='round')
-			feFuncA(type='table' tableValues='-2 5')
-		feBlend(in='box' result='opaque')
-		feMorphology(in='border' operator='dilate' radius='12' result='exp')
-		feComposite(in2='opaque' operator='in')
-		feGaussianBlur(stdDeviation='12' result='blur')
-		feTurbulence(type='fractalNoise' baseFrequency='7.13')
-		feDisplacementMap(in='blur' scale='8' yChannelSelector='R' result='glow')
-		feComposite(in='exp' in2='round' operator='in')
-		feComponentTransfer: feFuncA(type='gamma' exponent='1.25')
-		feBlend(in2='glow')
-		feBlend(in='box')
+<app-donacion-formulario-donacion (onButtonClick)="toggleGif()"></app-donacion-formulario-donacion>
 
-header
-	h1 animated border gradient on scroll into view
-	em scroll down to see effects
+<img *ngIf="showGif" [src]="gifUrl" alt="Gif en el padre">
 
-main
-	.card.animatable.hidden.css-pseudo
-		h2 Option #1
-		p Uses pure CSS and needs a pseudo-element. This requires inheriting the backround layer responsible for the border gradient onto the pseudo element that then gets blurred.
-	.card.animatable.hidden.svg-filter
-		h2 Option #2
-		p Needs no pseudo-elements, but requires an SVG filter. The basic idea is the same as
-			a(href='https://codepen.io/thebabydino/pen/xbKjQMv' target='_blank') here
-			|  - everything within the padding limit is fully opaque, while the border has an alpha in the [0,.5] interval, so the filter can extract the border and the padding-box separately and apply effeccts on just one of them.
-	.card.animatable.hidden.svg-grainy
-		h2 Option #3
-		p Similar to the previous one, only also adding a grain effect to the border glow. This involves using a displacement map generated via a feTurbulence primitive.
-	.card.animatable.hidden.svg-smooth
-		h2 Option #4
-		p Similar to the previous ones, only also rounding the card box corners and the rotating card border ends.
 
-footer
+</div>

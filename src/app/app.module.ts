@@ -32,6 +32,8 @@ import { RescatadosComponent } from './rescatados/rescatados.component';
 import { RescatadosModificarComponent } from './rescatados-modificar/rescatados-modificar.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ModalDonacionComponent } from './modal-donacion/modal-donacion.component';
+import { ModelContactoComponent } from './model-contacto/model-contacto.component';
 
 
 @NgModule({
@@ -58,7 +60,9 @@ import { HttpClientModule } from '@angular/common/http';
     NoticiaComponent,
     NoticiaIndividualComponent,
     RescatadosComponent,
-    RescatadosModificarComponent
+    RescatadosModificarComponent,
+    ModalDonacionComponent,
+    ModelContactoComponent
   ],
   imports: [
     BrowserModule,
