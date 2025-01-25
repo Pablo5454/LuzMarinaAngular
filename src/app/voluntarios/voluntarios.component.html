@@ -1,17 +1,48 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <!-- Cards con animación para la página de voluntarios -->
  <!-- https://codepen.io/thebabydino/pen/raBKVRG -->
 <main>
   <div class="card animatable hidden svg-filter">
-    <h2>Opción #1</h2>
-    <p>Usa solo CSS y necesita un pseudo-elemento.</p>
+    <h1>Nuestros Voluntarios</h1>
+      <p>"Bendecidos con la luz de Dios, servimos con fe y amor a quienes lo necesitan."</p>
     <div class="card-video">
       <video controls width="70%">
           <source src="/assets/imagenes/voluntarios.MP4" type="video/mp4">
           Tu navegador no soporta la reproducción de videos.
       </video>
   </div>
+  
   </div>
-
+  <div class="card animatable hidden svg-filter">
+    
+  <div class="voluntarios">
+    <h2>Voluntarios en Acción</h2>
+    <p>"Cada acción con amor es una oración en movimiento."</p>
+    <p>Estos son nuestros ultimos voluntarios</p>
+    <div class="gallery">
+      <img src="/assets/imagenes/papa_36_innocenzo_X.png"alt="Santiago Fernández - Quiso seguir el llamado de Dios para ayudar a salvar vidas en el mar" (click)="showModal($event)" >
+      <img src="/assets/imagenes/papa_38_clemente_IX.png"alt="Pedro Morales - Motivado por su fe, decidió dedicar su tiempo a la obra del Señor" (click)="showModal($event)">
+      <img src="/assets/imagenes/papa_3_s_anacleto.png"alt="Andrés Jiménez - Inspirado por las enseñanzas de Jesús, quiso servir a los más necesitados" (click)="showModal($event)">
+      <img src="/assets/imagenes/papa_3papa__innocenzo_IX.png"alt="Juan Pablo Torres - Vio en Luz Marina una oportunidad para vivir su vocación cristiana" (click)="showModal($event)">
+      <img src="/assets/imagenes/papa_4_s_clemente.png"alt="Mateo López - Cree que cada rescate es un milagro y una obra de la providencia divina" (click)="showModal($event)">
+      <img src="/assets/imagenes/papa_5_s_evaristo.png" alt="Lucas García - Considera su participación en Luz Marina como una misión encomendada por Cristo"(click)="showModal($event)">
+      <img src="/assets/imagenes/papa_8_s_telesforo.png"alt="Marcos Delgado - Decidió unirse para ser instrumento de Dios en la salvación de vidas" (click)="showModal($event)">
+      <img src="/assets/imagenes/papa_papa_papa__b_urbano_V.png"alt="Tomás Rivera - Cree firmemente que ayudar a los demás es vivir el amor de Cristo" (click)="showModal($event)">
+      <img src="/assets/imagenes/papa_107_giovanni_VIII.png"alt="Felipe Martínez - Motivado por su fe, busca llevar esperanza a quienes la han perdido" (click)="showModal($event)">
+      <img src="/assets/imagenes/papa_214_alessandro_VI.png"alt="Simón Castro - Inspirado por el evangelio, encontró en Luz Marina una forma de servir al Señor"(click)="showModal($event)" >
+    </div>
+  </div>
+  </div>
+<!-- Modal -->
+<div class="modal" *ngIf="isModalOpen">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <img [src]="modalImageUrl" alt="Imagen seleccionada">
+    <p>{{ modalText }}</p>
+  </div>
+</div>
   
 </main>
 
