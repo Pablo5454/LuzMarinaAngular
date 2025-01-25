@@ -19,3 +19,31 @@ span {
     
 }
 
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 20px; /* Ajuste de tamaño de texto para pantallas pequeñas */
+        margin-bottom: 8px; /* Ajuste del espaciado inferior */
+    }
+
+    span {
+        font-size: 14px; /* Ajuste de tamaño de texto para pantallas pequeñas */
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+/* Media Query para pantallas muy pequeñas (como móviles) */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 18px; /* Ajuste del tamaño del texto */
+        margin-bottom: 6px; /* Ajuste del espaciado inferior */
+    }
+
+    span {
+        font-size: 12px; /* Ajuste del tamaño del texto */
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
