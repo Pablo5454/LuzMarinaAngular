@@ -36,7 +36,7 @@ const routes: Routes = [
   {path: 'home', component:HomeComponent},
   {path: 'navbar', component:NavbarComponent},
   {path: 'login', component:LoginComponent},
-  {path: 'login', component:LoginComponent},
+  {path: 'register', component:RegisterComponent},
   {path: 'rescatados', component:RescatadosComponent},
   {path: 'proyectos', component:ProyectosComponent, children:[
     {path: 'proyectos-big-foto', component:ProyectosBigFotoComponent},

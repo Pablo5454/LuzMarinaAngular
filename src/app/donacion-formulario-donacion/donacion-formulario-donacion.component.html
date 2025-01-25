@@ -1,1 +1,72 @@
-<p>donacion-formulario-donacion works!</p>
+<div class="card">
+  <div class="card-image">
+    <!-- Información del formulario -->
+    <h2>Acto de Fe</h2>
+    <small>Gracias a Dios, tu donación ayuda a salvar vidas.</small>
+  </div>
+
+  <!-- Formulario de contacto -->
+  <form class="card-form">
+    <div class="input">
+      <input
+        type="text"
+        class="input-field"
+        [(ngModel)]="nombre"
+        name="nombre"
+        required
+      />
+      <label class="input-label">Nombre completo</label>
+    </div>
+
+    <div class="input">
+      <input
+        type="text"
+        class="input-field"
+        [(ngModel)]="email"
+        required
+      />
+      <label class="input-label">Email</label>
+    </div>
+
+    <div class="input">
+      <input
+        type="number"
+        class="input-field"
+        [(ngModel)]="direccion"
+        name="direccion"
+        required
+      />
+      <label class="input-label">numero de cuenta bancaria</label>
+    </div>
+
+    <div class="input">
+      <input
+        type="number"
+        class="input-field"
+        [(ngModel)]="importe"
+        name="importe"
+        required
+        min="1"
+      />
+      <label class="input-label">Importe</label>
+    </div>
+
+    <div class="action">
+      <button type="button" class="action-button" (click)="emitButtonClick1()">Gracias a Dios</button>
+    </div>
+  </form>
+</div>
+
+<!-- Modal de Donación -->
+<app-modal-donacion 
+  [nombre]="modalNombre" 
+  [email]="modalEmail" 
+  [direccion]="modalDireccion" 
+  [importe]="modalImporte" 
+  [isOpen]="mostrarModal" 
+  (closeModal)="cerrarModal()">
+  <div *ngIf="mensajeError" class="alert alert-danger">
+	{{ mensajeError }}
+    </div>
+    
+</app-modal-donacion>

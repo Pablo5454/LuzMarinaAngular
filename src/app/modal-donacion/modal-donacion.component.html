@@ -1,0 +1,22 @@
+<div *ngIf="isOpen" class="modal fade show" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true" style="display: block;">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">¡Gracias por tu donación!</h5>
+            <button type="button" class="close" (click)="cerrarModal()" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Nombre:</strong> {{ nombre }}</p>
+            <p><strong>Email:</strong> {{ email }}</p>
+            <p><strong>Dirección:</strong> {{ direccion }}</p>
+            <p><strong>Importe:</strong> {{ importe }} €</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="cerrarModal()">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    

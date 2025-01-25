@@ -1,0 +1,21 @@
+.container-donacion {
+      display: flex;
+      justify-content: center;
+}
+img {
+      width: 40vh;
+      height: 80%;
+      margin: 20px;
+      padding: 10px 10px;
+}
+@media (max-width: 768px) {
+      .container-donacion {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .container-donacion img {
+        width: 80%;
+            height: 40vh;
+      }
+    }
