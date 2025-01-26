@@ -1,1 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+/*css de carrusel*/
+.carousel-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .subtitulo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      z-index: 20;
+      background-color: rgba(0, 0, 0, 0.3); /* Fondo menos oscuro */
+      padding: 10px;
+      border-radius: 10px;
+      font-family: 'Lobster', cursive; /* Fuente original y legible */
+
+      h1 {
+        margin: 0;
+        font-size: 2em; /* Ajusta el tamaño del subtítulo */
+      }
+
+      p {
+        margin: 0;
+        font-size: 1.3em;
+      }
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+/* Botones de navegación */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
