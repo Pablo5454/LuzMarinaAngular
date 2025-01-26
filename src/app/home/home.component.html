@@ -1,42 +1,19 @@
+<div class="carousel-container">
+  <div class="carousel">
+    <div class="subtitulo">
+      <h1>Con la Ayuda de Dios, Cada Contribución Es Un Acto de Fe</h1>
+      <br>
+      <p>Un faro de esperanza en medio de la tormenta</p>
+    </div>
+    <img *ngFor="let slide of slides; let i = index" [src]="slide" [class.active]="i === currentSlide">
+  </div>
+</div>
 
-  <!-- <h2>LUZ MARINA</h2>
-  <span>Somos un equipo de voluntarios guiados por el amor de Cristo, dedicados a salvar vidas en el mar,
-    llevando</span>
-  <span> esperanza y ayuda a quienes más lo necesitan, respondiendo con compasión y entrega en situaciones de
-    emergencia.</span>
-  <div class="boton-container">
-    <button class="minimalista-boton ">Hazte Socio</button>
-    <button class="minimalista-boton ">DONA AHORA</button>
-  </div> -->
-          <!--Carrousel-->
-    
-        <!--Div que guarda todo el carrousel-->
-        <div class="slider">
-          <!--Div de las imagenes-->
-          <div class="slides">
-              
-            <img class="slide displaySlide" src="assets/imagenes/img1.jpg" alt="imagen1">
-            <img class="slide displaySlide" src="assets/imagenes/img2.webp" alt="imagen1">
-            <img class="slide displaySlide" src="assets/imagenes/img3.jpg" alt="imagen1">
-              
-              
-              
-              
-              
-              
-              
-              
-          </div>
-          <!--Botones de anterior y siguiente-->
-          <button class="prev" onclick="prevSlide()">&#10094;</button>
-          <button class="next" onclick="nextSlide()">&#10095;</button>
-      </div>
-
-
-
-<div class="subtitulo">
-  <h1>Con la Ayuda de Dios, Cada Contribución Es Un Acto de Fe</h1>
-  <p>Un faro de esperanza en medio de la tormenta</p>
+<div class="home">
+  <div class="container-sec-text">
+    <h1>¿Quienes Somos?</h1>
+    Luz Marina es una organización de salvamento marítimo compuesta por un equipo de voluntarios
+  </div>
 </div>
 
 <div class="home">
@@ -69,4 +46,3 @@
     </div>
   </div>
 </div>
-  
