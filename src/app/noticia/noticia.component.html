@@ -32,18 +32,22 @@
   *ngIf="selectedNoticia"
   (click)="closeModal()"
 >
-  <div class="modal-content" (click)="$event.stopPropagation()">
-    <!-- Botón de cierre -->
-    <span class="close" (click)="closeModal()">&times;</span>
+<div class="modal-content" (click)="$event.stopPropagation()">
+  <!-- Botón de cierre -->
+  <span class="close" (click)="closeModal()">&times;</span>
 
-    <!-- Título de la noticia -->
-    <h2>{{ selectedNoticia.titulo }}</h2>
+  <!-- Título de la noticia -->
+  <h2 [ngStyle]="{ 'font-size': fontSize + 'px' }">{{ selectedNoticia.titulo }}</h2>
 
-    <!-- Imagen de la noticia -->
-    <img [src]="selectedNoticia.imagen" alt="Imagen de {{ selectedNoticia.titulo }}" />
+  <!-- Imagen de la noticia -->
+  <img [src]="selectedNoticia.imagen" alt="Imagen de {{ selectedNoticia.titulo }}" />
 
-    <!-- Cuerpo de la noticia -->
-    <p>{{ selectedNoticia.cuerpo }}</p>
+  <!-- Cuerpo de la noticia -->
+  <p [ngStyle]="{ 'font-size': fontSize + 'px' }">{{ selectedNoticia.cuerpo }}</p>
+
+  <!-- Botones para cambiar el tamaño de la fuente -->
+  <div class="font-size-controls">
+    <button (click)="decreaseFontSize()">A-</button>
+    <button (click)="increaseFontSize()">A+</button>
   </div>
 </div>
-        
