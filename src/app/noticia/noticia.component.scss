@@ -187,6 +187,27 @@ h1 {
   background: none;
   border: none;
 }
+.font-size-controls {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.font-size-controls button {
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.font-size-controls button:hover {
+  background-color: #666;
+}
 
 /* Media Queries para hacer el diseño responsive */
 @media screen and (max-width: 64rem) {
