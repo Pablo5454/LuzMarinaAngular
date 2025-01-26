@@ -4,7 +4,7 @@
       "id": "1",
       "nombre": "Luna",
       "foto": "url-a-foto-de-luna",
-      "edad": 3,
+      "edad": 4,
       "sexo": "Femenino",
       "procedencia": "Madrid",
       "valoracion_medica": "Buena",
@@ -38,19 +38,6 @@
       "rescate_id": 2003,
       "created_at": "2025-01-03T12:00:00Z",
       "updated_at": "2025-01-12T14:00:00Z"
-    },
-    {
-      "id": "4",
-      "nombre": "423333",
-      "foto": "432",
-      "edad": 43222,
-      "sexo": "Masculino",
-      "procedencia": "4233333",
-      "valoracion_medica": "432222222",
-      "medico_id": 0,
-      "rescate_id": 0,
-      "created_at": "",
-      "updated_at": ""
     }
   ]
 }
