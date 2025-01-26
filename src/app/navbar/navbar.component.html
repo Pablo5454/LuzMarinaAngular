@@ -7,8 +7,8 @@
     </div>
 
     <div class="bocadillo d-flex align-items-center">
-      <div class="perfil-">
-      <img src="../../assets/imagenes/profile.svg" alt="Perfil"  (click)="toggleMenu()">
+      <div class="perfil-" >
+      <img src="../../assets/imagenes/profile.svg" alt="Perfil" class="perfil-" [routerLink]="['/login']">
     </div>
       <div class="boton">
         <button class="navbar-toggler ms-2" type="button" (click)="isCollapsed = !isCollapsed" aria-controls="navbarNav"

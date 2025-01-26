@@ -2,7 +2,7 @@
 .contacto
 {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 10%;
   background-color: #ffffff;
@@ -12,3 +12,5 @@
 
 
 
+//json-server --watch db.json
+//npm install -g json-server

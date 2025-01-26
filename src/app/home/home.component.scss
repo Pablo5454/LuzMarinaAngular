@@ -79,3 +79,89 @@
   
   filter: blur();
 }
+
+
+/* Para pantallas pequeñas como teléfonos  */
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 80vh; 
+  }
+
+  .carousel .subtitulo {
+    font-size: 1.2em;
+    padding: 5px;
+  }
+
+  .carousel .subtitulo h1 {
+    font-size: 1.5em;
+  }
+
+  .carousel .subtitulo p {
+    font-size: 1em; 
+  }
+
+  .prev,
+  .next {
+    font-size: 20px; 
+    padding: 10px;
+  }
+}
+
+/* Para pantallas medianas como tablets (entre 769px y 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .carousel-container {
+    height: 90vh; 
+  }
+
+  .carousel .subtitulo {
+    font-size: 1.4em; 
+  }
+
+  .carousel .subtitulo h1 {
+    font-size: 1.8em;
+  }
+
+  .carousel .subtitulo p {
+    font-size: 1.2em;
+  }
+
+  .prev,
+  .next {
+    font-size: 25px;
+    padding: 12px;
+  }
+}
+
+
+@media (min-width: 1025px) {
+  .carousel-container {
+    height: 100vh;
+  }
+
+  .carousel .subtitulo h1 {
+    font-size: 2em; 
+  }
+
+  .carousel .subtitulo p {
+    font-size: 1.3em; 
+  }
+
+  .prev,
+  .next {
+    font-size: 30px;
+    padding: 15px;
+  }
+}
+
+/* Ajuste del contenedor */
+.container-sec-text {
+  padding: 20px;
+  font-size: 1em;
+}
+
+@media (max-width: 768px) {
+  .container-sec-text {
+    font-size: 0.9em;
+    padding: 15px; 
+  }
+}
