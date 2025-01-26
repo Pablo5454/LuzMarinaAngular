@@ -1,11 +1,18 @@
 <div class="card">
   <div class="card-image">
-    <!-- Información del formulario -->
     <h2>Acto de Fe</h2>
     <small>Gracias a Dios, tu donación ayuda a salvar vidas.</small>
   </div>
 
-  <!-- Formulario de contacto -->
+  <!-- Mostrar mensajes de error y éxito -->
+  <div *ngIf="mensajeError" class="alert alert-danger">
+    {{ mensajeError }}
+  </div>
+  <div *ngIf="mensajeExito" class="alert alert-success">
+    {{ mensajeExito }}
+  </div>
+
+  <!-- Formulario de donación -->
   <form class="card-form">
     <div class="input">
       <input
@@ -23,6 +30,7 @@
         type="text"
         class="input-field"
         [(ngModel)]="email"
+        name="email"
         required
       />
       <label class="input-label">Email</label>
@@ -30,13 +38,13 @@
 
     <div class="input">
       <input
-        type="number"
+        type="text"
         class="input-field"
-        [(ngModel)]="direccion"
-        name="direccion"
+        [(ngModel)]="bancaria"
+        name="bancaria"
         required
       />
-      <label class="input-label">numero de cuenta bancaria</label>
+      <label class="input-label">Número de cuenta bancaria</label>
     </div>
 
     <div class="input">
@@ -56,17 +64,3 @@
     </div>
   </form>
 </div>
-
-<!-- Modal de Donación -->
-<app-modal-donacion 
-  [nombre]="modalNombre" 
-  [email]="modalEmail" 
-  [direccion]="modalDireccion" 
-  [importe]="modalImporte" 
-  [isOpen]="mostrarModal" 
-  (closeModal)="cerrarModal()">
-  <div *ngIf="mensajeError" class="alert alert-danger">
-	{{ mensajeError }}
-    </div>
-    
-</app-modal-donacion>

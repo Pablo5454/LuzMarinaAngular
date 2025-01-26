@@ -1,68 +1,92 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-donacion-formulario-donacion',
   templateUrl: './donacion-formulario-donacion.component.html',
   styleUrls: ['./donacion-formulario-donacion.component.scss'],
-  animations: [
-    
-  ]
 })
 export class DonacionFormularioDonacionComponent {
   @Output() onButtonClick = new EventEmitter<void>();
 
+  // Variables para los inputs
   nombre: string = '';
   email: string = '';
-  direccion: string = '';
+  bancaria: string = '';
   importe: number | null = null;
 
-  mostrarModal: boolean = false;
-  modalNombre: string = '';
-  modalEmail: string = '';
-  modalDireccion: string = '';
-  modalImporte: number | null = null;
-  mensajeError: string = ''; // Mensaje de error
+  // Variables para mensajes
+  mensajeError: string = '';
+  mensajeExito: string = '';
 
-  emitButtonClick(): void {
-    this.onButtonClick.emit();
-  }
-
+  // Método para validar y enviar el formulario
   emitButtonClick1(): void {
     if (this.validarFormulario()) {
-      this.modalNombre = this.nombre;
-      this.modalEmail = this.email;
-      this.modalDireccion = this.direccion;
-      this.modalImporte = this.importe;
-
-      // Mostrar el modal con los datos de la donación
-      this.mensajeError = ''; // Limpiar cualquier mensaje de error
-      this.mostrarModal = true;
+      this.mensajeExito = '¡Gracias por tu donación! Tu ayuda es invaluable.';
+      this.mensajeError = '';
+      console.log('Datos enviados:', {
+        nombre: this.nombre,
+        email: this.email,
+        bancaria: this.bancaria,
+        importe: this.importe,
+      });
+      this.ocultarMensajes(); 
       this.limpiarFormulario();
     } else {
-      this.mensajeError = 'Por favor, completa todos los campos correctamente.';
-      this.mostrarModal = true; // Mostrar el modal con el mensaje de error
+      this.mensajeExito = ''; 
+      this.ocultarMensajes();
     }
   }
 
+  // Método para validar el formulario
   validarFormulario(): boolean {
-    return (
-      this.nombre.trim() !== '' &&
-      this.email.trim() !== '' &&
-      this.direccion.trim() !== '' &&
-      this.importe !== null &&
-      this.importe > 0
-    );
+    if (this.nombre.trim() === '') {
+      this.mensajeError = 'Por favor, ingresa tu nombre.';
+      return false;
+    }
+
+    if (!this.validarEmail(this.email)) {
+      this.mensajeError = 'Por favor, ingresa un email válido.';
+      return false;
+    }
+
+    if (!this.validarCuentaBancaria(this.bancaria)) {
+      this.mensajeError = 'Por favor, ingresa un número de cuenta bancaria válido (9 dígitos).';
+      return false;
+    }
+
+    if (this.importe === null || this.importe < 5) {
+      this.mensajeError = 'El importe debe ser igual o mayor a 5.';
+      return false;
+    }
+
+    return true;
   }
 
+  // Validar email
+  validarEmail(email: string): boolean {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+  }
+
+  // Validar número de cuenta bancaria (9 dígitos)
+  validarCuentaBancaria(cuenta: string): boolean {
+    const cuentaRegex = /^\d{9}$/;
+    return cuentaRegex.test(cuenta);
+  }
+
+  // Ocultar mensajes después de 3 segundos
+  ocultarMensajes(): void {
+    setTimeout(() => {
+      this.mensajeError = '';
+      this.mensajeExito = '';
+    }, 3000);
+  }
+
+  // Limpiar los campos del formulario
   limpiarFormulario(): void {
     this.nombre = '';
     this.email = '';
-    this.direccion = '';
+    this.bancaria = '';
     this.importe = null;
-  }
-
-  cerrarModal(): void {
-    this.mostrarModal = false;
   }
 }
